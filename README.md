@@ -1,5 +1,7 @@
 # Markdown Workshop
+# This is my example of README to be assigned to branch cdl-17
 
+## Purpose of the workshoo
 This is a practical workshop about the syntax and the use of the [Markdown format](https://www.markdownguide.org/basic-syntax/).
 In particular, we will focus on the [GitHub Flavored Markdown](https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax), used by GitHub.
 See the full specification of the GitHub Flavored Markdown [here](https://github.github.com/gfm/).
@@ -65,6 +67,9 @@ The [main repository](https://github.com/rosedu/workshop-markdown) already has b
 You will be assigned a branch.
 
 You will create pull requests **to** that branch.
+
+**You will create only pull requeest to that branch**
+
 
 ## Correct Markdown File
 
