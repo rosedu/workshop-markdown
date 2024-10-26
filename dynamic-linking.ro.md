@@ -79,9 +79,9 @@ Putem investiga bibliotecile dinamice folosite de un executabil prin intermediul
 
 ```console
 [..]/06-dynamic$ ldd main
-	linux-gate.so.1 (0xf7f97000)
-	libc.so.6 => /lib/i386-linux-gnu/libc.so.6 (0xf7d8a000)
-	/lib/ld-linux.so.2 (0xf7f98000)
+        linux-gate.so.1 (0xf7f97000)
+        libc.so.6 => /lib/i386-linux-gnu/libc.so.6 (0xf7d8a000)
+        /lib/ld-linux.so.2 (0xf7f98000)
 ```
 
 În rezultatul de mai sus, observăm că executabilul folosește biblioteca standard C, localizată la calea `/lib/i386-linux-gnu/libc.so.6`.
@@ -159,10 +159,10 @@ O eroare similară obținem dacă folosim utilitarul `ldd`:
 
 ```console
 [..]/07-dynlib$ ldd ./main
-	linux-gate.so.1 (0xf7f9f000)
-	libinc.so => not found
-	libc.so.6 => /lib/i386-linux-gnu/libc.so.6 (0xf7d92000)
-	/lib/ld-linux.so.2 (0xf7fa0000)
+        linux-gate.so.1 (0xf7f9f000)
+        libinc.so => not found
+        libc.so.6 => /lib/i386-linux-gnu/libc.so.6 (0xf7d92000)
+        /lib/ld-linux.so.2 (0xf7fa0000)
 ```
 
 La fel, biblioteca `libinc.so` nu este găsită.
@@ -175,10 +175,10 @@ Odată folosită variabila de mediu `LD_LIBRARY_PATH`, lansarea în execuție a 
 
 ```console
 [..]/07-dynlib$ LD_LIBRARY_PATH=. ldd ./main
-	linux-gate.so.1 (0xf7eda000)
-	libinc.so => ./libinc.so (0xf7ed2000)
-	libc.so.6 => /lib/i386-linux-gnu/libc.so.6 (0xf7cca000)
-	/lib/ld-linux.so.2 (0xf7edb000)
+        linux-gate.so.1 (0xf7eda000)
+        libinc.so => ./libinc.so (0xf7ed2000)
+        libc.so.6 => /lib/i386-linux-gnu/libc.so.6 (0xf7cca000)
+        /lib/ld-linux.so.2 (0xf7edb000)
 
 [..]/07-dynlib$ LD_LIBRARY_PATH=. ./main
 num_items: 1
@@ -186,4 +186,4 @@ num_items: 1
 
 Variabila de mediu `LD_LIBRARY_PATH` pentru loader este echivalentul opțiunii `-L` în comanda de linkare: precizează directoarele în care să fie căutate biblioteci pentru a fi încărcate, respectiv linkate.
 Folosirea variabilei de mediu `LD_LIBRARY_PATH` este recomandată pentru teste.
-Pentru o folosire robustă, există alte mijloace de precizare a căilor de căutare a bibliotecilor partajate, documentate în (pagina de manual a loaderului / linkerului dinamic)(https://man7.org/linux/man-pages/man8/ld.so.8.html#DESCRIPTION).
+Pentru o folosire robustă, există alte mijloace de precizare a căilor de căutare a bibliotecilor partajate, documentate în [pagina de manual a loaderului / linkerului dinamic](https://man7.org/linux/man-pages/man8/ld.so.8.html#DESCRIPTION).
