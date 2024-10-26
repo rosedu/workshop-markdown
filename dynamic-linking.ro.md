@@ -145,7 +145,7 @@ inc.c  inc.h  inc.o  libinc.so  main  main.c  main.o  Makefile
 Executabilul obținut are dimensiunea în jur de `7 KB` puțin mai mică decât a executabilului din exemplul anterior.
 Diferența cea mai mare este că, acum, simbolurile din biblioteca `libinc.so` (`increment`, `init`, `print`, `read`) sunt nerezolvate.
 
-Dacă încercăm lansarea în execuție a executabilului, observăm că primim o eroare:
+Dacă încercăm lansarea în execuție a executabilului, observăm că primim o eroare::
 
 ```console
 [..]/07-dynlib$ ./main
