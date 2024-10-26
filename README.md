@@ -159,6 +159,8 @@ That is:
 The `helloworld-print.pdf` file is a PDF print of a GitHub view of a Markdown file.
 Create the `helloworld.md` file that will generate that precise GitHub view.
 
+**Note**: The first large "Hello, World!" message is an image file: the file `helloworld.png` in the repository.
+
 Make sure you do the following:
 
 - Start by creating a branch where you do you work.
