@@ -64,3 +64,76 @@ Run with:
 ```console
 ./helloworld
 ```
+
+# Dlang
+```cpp
+import std.stdio;
+
+void main()
+{
+    writeln("Hello, World!");
+}
+
+```
+
+Build with:
+```console
+gdc -Wall -o helloworld helloworld.d
+```
+
+Run with:
+```
+./helloworld
+```
+
+# Go
+```go
+package main
+
+import "fmt"
+
+func main() {
+    fmt.Println("Hello, World!")
+}
+```
+
+Build and run with:
+```console
+go run helloworld.go
+```
+
+# Rust
+```rust
+fn main() {
+    println!("Hello, World");
+}
+```
+
+Build with:
+```console
+rustc hello.rs
+```
+
+Run with:
+```console
+./helloworld
+```
+
+# Java
+```java
+public class HelloWorld {
+    public static void main(String[] args) {
+        System.out.println("Hello, World!");
+    }
+}
+```
+
+Build with:
+```console
+javac HelloWorld.java
+```
+
+Run with:
+```java 
+HelloWorld
+```
