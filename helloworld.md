@@ -1,4 +1,4 @@
-![Hello, World!](path/to/helloworld.png)
+![Hello, World!](helloworld.png)
 ```python
 print("Hello, World!")
 ```

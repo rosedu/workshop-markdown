@@ -148,7 +148,7 @@ int pthread_mutex_unlock(pthread_mutex_t *mutex);
 |----------|----------|
 | ceva     | altceva  |
 
-![Hello, World!](path/to/helloworld.png)
+![Hello, World!](helloworld.png)
 ##### Bariera
 :smile:
 Ea are rolul de a se asigura că niciun thread nu poate trece mai departe de punctul în care este plasată decât atunci când toate thread-urile gestionate de barieră ajung în acel punct.
