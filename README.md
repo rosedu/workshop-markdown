@@ -1,9 +1,5 @@
 # Markdown Workshop
 
-### aici este un mic test test test
-
-### alt test
-
 This is a practical workshop about the syntax and the use of the [Markdown format](https://www.markdownguide.org/basic-syntax/).
 In particular, we will focus on the [GitHub Flavored Markdown](https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax), used by GitHub.
 See the full specification of the GitHub Flavored Markdown [here](https://github.github.com/gfm/).
@@ -16,7 +12,7 @@ git clone https://github.com/<your-github-username>/workshop-markdown
 cd workshop-markdown/
 ```
 
-Replace `<your-github-username>` above with your GitHub username.
+Replace `<topa-mihai-sebastian>` above with your GitHub username.
 
 And let's get going! 🚀
 
