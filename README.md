@@ -12,7 +12,7 @@ git clone https://github.com/<your-github-username>/workshop-markdown
 cd workshop-markdown/
 ```
 
-Replace `<topa-mihai-sebastian>` above with your GitHub username.
+Replace `topa-mihai-sebastian` above with your GitHub username.
 
 And let's get going! 🚀
 
