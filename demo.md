@@ -97,6 +97,13 @@ done
 <br>
 
 > [!NOTE]
-> This above is an image from my local machine so it will be here as long as it is present on my pc
+> This above is an image from my fork so it will be here until I delete it locally.
+<br>
+
+5. ![DO NOT CLICK](./helloworld.png)
+<br>
+
+> [!NOTE]
+> This above is an image from my fork so it will be here until I delete it locally.
 <br>
 
