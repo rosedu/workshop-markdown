@@ -51,4 +51,13 @@ done
 > It prints the message between double quotes every hour until it is stopped.
 </details>
 
+##### Was the previous code working in the background or foreground?
+
+<details>
+<summary> Expand for the answer </summary>
+
+#### Answer:
+> It was running in the foreground and you cannot use the terminal while the process does not terminate!
+</details>
+
 
