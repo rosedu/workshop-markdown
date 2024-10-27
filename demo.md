@@ -20,7 +20,7 @@
 <summary> Expand for the answer </summary>
 
 #### Answer:
-ARO stands for *Auto România* and is a Romanian car brand from 1957.
+> ARO stands for *Auto România* and is a Romanian car brand from 1957.
 
 </details>
 
