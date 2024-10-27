@@ -12,7 +12,7 @@ The table below summarizes the programs:
 | Language | Lnaguage (Spec) Site | Section | Build / Run Toolchain | Debian / Ubuntu Packages |
 | -------- | -------------------- | ------- | --------------------- | ------------------------ |
 | C        | [The Standard - C](https://www.iso-9899.info/wiki/The_Standard)| [C](#c) | GCC | build-essetial |
-| C++ | [The Standard - C++](https://isocpp.org/std/the-standard) | [C++](#c++) | GCC / G++ | build-essential, g++ |
+| C++ | [The Standard - C++](https://isocpp.org/std/the-standard) | [C++](https://github.com/florianAriasu/workshop-markdown/blob/cdl-26/helloworld.md#c-1) | GCC / G++ | build-essential, g++ |
 | Dlang | [D Programming Language: Home](https://dlang.org/) | [Dlang](#dlang) | GCC / GDC | build-essential, gdc |
 | Go | [The Go Programming Language](https://go.dev/) | [Go](#go) | Go | golang |
 | Rust | [Rust Programming Language](https://www.rust-lang.org/) | [Rust](#rust) | Rust(Crate) | rustlang |
