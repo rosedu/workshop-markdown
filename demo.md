@@ -107,3 +107,9 @@ done
 > This above is an external link. See where it leads you.
 <br>
 
+> [!WARNING]
+> It s safe! All external links above use `https` protocol
+<br>
+
+
+
