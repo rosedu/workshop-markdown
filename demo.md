@@ -93,4 +93,10 @@ done
 > This above is an image from the web and if the image is removed, then it won t show up in the repo as well when clicked
 <br>
 
-4. ![What you see?](./helloworld.png)
+4. ![](./helloworld.png)
+<br>
+
+> [!NOTE]
+> This above is an image from my local machine so it will be here as long as it is present on my pc
+<br>
+
