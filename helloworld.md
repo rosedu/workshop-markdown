@@ -50,16 +50,28 @@ Run with:
 ./helloworld
 ```
 
-
 # C++
+```console
 
+#include <iostream>
 
+int main()
+{
+    std::cout << "Hello, World!" << std::endl;
+    return 0;
+}
+```
+Build with:
 
+```console
+g++ -Wall -o helloworld helloworld.cpp
+```
 
+Run with:
 
-
-
-
+```console
+./helloworld
+```
 
 # Dlang
 
