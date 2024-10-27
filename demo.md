@@ -26,5 +26,29 @@
 > ARO stands for *Auto România* and is a Romanian car brand from 1957.
 </details>
 
+<br>
+
+> [!TIP]
+> To continue, you need a bit of Bash scripting and Linux knowledge.
+
+#### Second section
+
+##### What does the following code snippet do?
+
+```Bash
+#!/bin/bash
+
+while true; do
+  echo "Hello, World!"
+  sleep 1h
+done
+```
+
+<details>
+<summary> Expand for the answer </summary>
+
+#### Answer:
+> It prints the message between double quotes every hour untill is stopped.
+</details>
 
 
