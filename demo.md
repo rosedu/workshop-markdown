@@ -56,7 +56,7 @@ done
 <summary> Expand for the answer </summary>
 
 #### Answer:
-> It was running in the foreground and you cannot use the terminal while the process does not terminate!
+> It was running in the foreground and you cannot use the terminal until the process terminates!
 </details>
 
 3. ##### How can you send the process to the background?
@@ -72,7 +72,7 @@ done
 <summary> Expand for the answer </summary>
 
 #### Answer:
-> The answer is **Yes**. You have to run the script as follows: ./myScript.sh &
+> The answer is **Yes**. You have to run the script as follows: `./myScript.sh &`
 </details>
 
 
