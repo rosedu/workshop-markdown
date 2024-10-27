@@ -78,7 +78,12 @@ done
 
 > [!IMPORTANT]
 > In order to proceed further, you should have known the answer to at least 2 out of 4 questions above!
+<br>
 
 #### Third Section
 
+##### This section is dedicated to links and images with some questions at the end
+
+1. [This is a link to my first section](#first-section)
+2. [This is a link to my second section](#second-section)
 
