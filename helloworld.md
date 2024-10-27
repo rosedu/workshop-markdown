@@ -7,6 +7,8 @@ specified compiler or interpreter is required for each programming languages.
 
 The table below summarizes the programs:
 
+
+
 | Language | Lnaguage (Spec) Site | Section | Build / Run Toolchain | Debian / Ubuntu Packages |
 | -------- | -------------------- | ------- | --------------------- | ------------------------ |
 | C        | [The Standard - C](https://www.iso-9899.info/wiki/The_Standard)| [C](#c) | GCC | build-essetial |
@@ -26,13 +28,27 @@ The table below summarizes the programs:
 
 
 # C
+```console
 
+#include <stdio.h>
 
+int main(void)
+{
+    puts("Hello, World!");
+    return 0;
+}
+```
+Build with:
 
+```console
+gcc -Wall -o helloworld helloworld.c
+```
 
+Run with:
 
-
-
+```console
+./helloworld
+```
 
 # C++
 
