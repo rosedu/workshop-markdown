@@ -153,18 +153,31 @@ java HelloWorld
 # x86_64 assembly
 ```console
 
-#include <iostream>
+section .data               ; Section for initialized data
+    hello db 'Hello, World!', 0   ; Null-terminated string
 
-int main()
-{
-    std::cout << "Hello, World!" << std::endl;
-    return 0;
-}
+section .text               ; Section for code
+    global _start           ; Entry point for the program
+
+_start:                    ; Main program entry point
+    ; Write the string to stdout
+    mov rax, 1            ; syscall: write
+    mov rdi, 1            ; file descriptor: stdout
+    mov rsi, hello         ; pointer to the string
+    mov rdx, 13            ; length of the string
+    syscall                ; invoke the kernel
+
+    ; Exit the program
+    mov rax, 60           ; syscall: exit
+    xor rdi, rdi          ; status: 0
+    syscall                ; invoke the kernel
+
 ```
 Build with:
 
 ```console
-g++ -Wall -o helloworld helloworld.cpp
+nasm -f elf64 helloworld.asm -o helloworld.o
+ld helloworld.o -o helloworld
 ```
 
 Run with:
@@ -175,18 +188,31 @@ Run with:
 # ARM64 assembly
 ```console
 
-#include <iostream>
+.section .data
+    hello:  .asciz "Hello, World!\n"  # The string to print
 
-int main()
-{
-    std::cout << "Hello, World!" << std::endl;
-    return 0;
-}
+.section .text
+    .global _start
+
+_start:
+    // Write the string to stdout
+    mov x0, 1                   // File descriptor (stdout)
+    ldr x1, =hello              // Pointer to the string
+    ldr x2, =13                 // Length of the string
+    mov x8, 64                  // Syscall number for write
+    svc 0                       // Make syscall
+
+    // Exit the program
+    mov x0, 0                   // Exit code
+    mov x8, 93                  // Syscall number for exit
+    svc 0                       // Make syscall
+
 ```
 Build with:
 
 ```console
-g++ -Wall -o helloworld helloworld.cpp
+nasm -f aarch64 helloworld.asm -o helloworld.o
+ld helloworld.o -o helloworld
 ```
 
 Run with:
