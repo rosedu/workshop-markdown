@@ -19,8 +19,6 @@
 > [!NOTE]
 > Note that there is a Romanian car brand as well, spot it!
 
-<br><br>
-
 <details>
 <summary> Expand for the answer </summary>
 
