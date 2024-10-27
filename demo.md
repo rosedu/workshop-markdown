@@ -210,5 +210,16 @@ public class Singleton {
 
 ##### What is your favourite emoji?
 ##### Some of the most popular emojis are listed below: 
-:laughing: :smiley: :wink:
+:laughing: :smiley: :wink: :star_struck: :hugs:
+
+##### Emojis palette is more diversed than that
+:point_right: :lungs: :facepalm: :sassy_womand: :heart_on_fire: :tophat: :gem:
+
+##### And there are a lot more, feel free to check them out at: [Emoji Cheat Sheet](https://github.com/ikatyang/emoji-cheat-sheet/blob/master/README.md#objects)
+
+#### Sixth Section
+
+##### This section is intended to create simple diagrams
+
+
 
