@@ -24,7 +24,6 @@
 
 #### Answer:
 > ARO stands for *Auto România* and is a Romanian car brand from 1957.
-
 </details>
 
 
