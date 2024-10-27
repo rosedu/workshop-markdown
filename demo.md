@@ -59,4 +59,12 @@ done
 > It was running in the foreground and you cannot use the terminal while the process does not terminate!
 </details>
 
+3. ##### How can you send the process to the background?
+<details>
+<summary> Expand for the answer </summary>
+
+#### Answer:
+> First you have to pause it with **Ctrl + z** than you have to run `bg`
+</details>
+
 
