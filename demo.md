@@ -1,6 +1,6 @@
 <!-- This is my very first md file -->
 
-# This is my very first md file done entirely by me<br>
+# Demo md file for the workshop<br>
 
 ### There will be separate sections so to present the GFM (Github Flavoured Markdown)<br><br>
 
@@ -150,5 +150,54 @@ done
 <br>
 
 #### Forth Section
+
+##### This section is for formatting code snippets
+
+1. ##### What programming language is this below?
+
+```ruby
+array = [1, 2, 3, 4, 5]
+
+element_count = array.size
+
+puts "Number of elements in the array: #{element_count}"
+```
+
+2. ##### What about this one?
+```python
+# Define a list of strings
+string_array = ["sky", "hello", "world", "by", "python", "fly"]
+
+def contains_vowel(s):
+    return any(char in 'aeiou' for char in s)
+
+vowel_strings = [s for s in string_array if contains_vowel(s)]
+
+print("Strings containing vowels:", vowel_strings)
+```
+
+3. ##### Do you know this one?
+```java
+public class Singleton {
+    private static Singleton instance;
+    private Singleton() {}
+
+    public static Singleton getInstance() {
+        if (instance == null) {
+            instance = new Singleton();
+        }
+        return instance;
+    }
+
+    public void showMessage() {
+        System.out.println("Hello from the Singleton instance!");
+    }
+    
+    public static void main(String[] args) {
+        Singleton singleton = Singleton.getInstance();
+        singleton.showMessage();
+    }
+}
+```
 
 
