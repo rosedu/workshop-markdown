@@ -213,13 +213,90 @@ public class Singleton {
 :laughing: :smiley: :wink: :star_struck: :hugs:
 
 ##### Emojis palette is more diversed than that
-:point_right: :lungs: :facepalm: :sassy_womand: :heart_on_fire: :tophat: :gem:
+:point_right: :lungs: :facepalm: :sassy_woman: :heart_on_fire: :tophat: :gem:
 
 ##### And there are a lot more, feel free to check them out at: [Emoji Cheat Sheet](https://github.com/ikatyang/emoji-cheat-sheet/blob/master/README.md#objects)
 
 #### Sixth Section
 
-##### This section is intended to create simple diagrams
+##### This section is intended to create diagrams
 
+- This is a map with the source code from: [GeoJSON](https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/creating-diagrams#using-geojson)
 
+```geojson
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "id": 1,
+      "properties": {
+        "ID": 0
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+              [-90,35],
+              [-90,30],
+              [-85,30],
+              [-85,35],
+              [-90,35]
+          ]
+        ]
+      }
+    }
+  ]
+}
+```
+
+- This is an example using STL 3D Models
+
+```stl
+solid cube_corner
+  facet normal 0.0 -1.0 0.0
+    outer loop
+      vertex 0.0 0.0 0.0
+      vertex 1.0 0.0 0.0
+      vertex 0.0 0.0 1.0
+    endloop
+  endfacet
+  facet normal 0.0 0.0 -1.0
+    outer loop
+      vertex 0.0 0.0 0.0
+      vertex 0.0 1.0 0.0
+      vertex 1.0 0.0 0.0
+    endloop
+  endfacet
+  facet normal -1.0 0.0 0.0
+    outer loop
+      vertex 0.0 0.0 0.0
+      vertex 0.0 0.0 1.0
+      vertex 0.0 1.0 0.0
+    endloop
+  endfacet
+  facet normal 0.577 0.577 0.577
+    outer loop
+      vertex 1.0 0.0 0.0
+      vertex 0.0 1.0 0.0
+      vertex 0.0 0.0 1.0
+    endloop
+  endfacet
+endsolid
+```
+
+- This is the simplest diagram so far
+
+```mermaid
+graph TD;
+    A-->B;
+    A-->C;
+    A-->E;
+    B-->D;
+    B-->E;
+    C-->D;
+    D-->F;
+    D-->G;
+    E-->F;
+```
 
