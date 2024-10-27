@@ -25,11 +25,11 @@
 #### Answer:
 > ARO stands for *Auto România* and is a Romanian car brand from 1957.
 </details>
-
 <br>
 
 > [!TIP]
 > To continue, you need a bit of Bash scripting and Linux knowledge.
+<br>
 
 #### Second section
 
@@ -50,6 +50,7 @@ done
 #### Answer:
 > It prints the message between double quotes every hour until it is stopped.
 </details>
+<br>
 
 2. ##### Was the previous code working in the background or foreground?
 
