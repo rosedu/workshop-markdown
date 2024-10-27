@@ -33,7 +33,7 @@
 
 #### Second section
 
-##### What does the following code snippet do?
+1. ##### What does the following code snippet do?
 
 ```Bash
 #!/bin/bash
@@ -51,7 +51,7 @@ done
 > It prints the message between double quotes every hour until it is stopped.
 </details>
 
-##### Was the previous code working in the background or foreground?
+2. ##### Was the previous code working in the background or foreground?
 
 <details>
 <summary> Expand for the answer </summary>
