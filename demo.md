@@ -50,7 +50,6 @@ done
 #### Answer:
 > It prints the message between double quotes every hour until it is stopped.
 </details>
-<br>
 
 2. ##### Was the previous code working in the background or foreground?
 
