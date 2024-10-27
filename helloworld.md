@@ -9,7 +9,7 @@ The table below summarizes the programs:
 
 
 
-| Language | Lnaguage (Spec) Site | Section | Build / Run Toolchain | Debian / Ubuntu Packages |
+| Language | Language (Spec) Site | Section | Build / Run Toolchain | Debian / Ubuntu Packages |
 | -------- | -------------------- | ------- | --------------------- | ------------------------ |
 | C        | [The Standard - C](https://www.iso-9899.info/wiki/The_Standard)| [C](#c) | GCC | build-essetial |
 | C++ | [The Standard - C++](https://isocpp.org/std/the-standard) | [C++](https://github.com/florianAriasu/workshop-markdown/blob/cdl-26/helloworld.md#c-1) | GCC / G++ | build-essential, g++ |
