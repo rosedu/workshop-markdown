@@ -165,7 +165,6 @@ puts "Number of elements in the array: #{element_count}"
 
 2. ##### What about this one?
 ```python
-# Define a list of strings
 string_array = ["sky", "hello", "world", "by", "python", "fly"]
 
 def contains_vowel(s):
@@ -199,5 +198,11 @@ public class Singleton {
     }
 }
 ```
+<details>
+<summary> Expand for the answer </summary>
 
+#### Answer:
+> The answers are: Ruby, Python, Java in this order.
+</details>
+<br>
 
