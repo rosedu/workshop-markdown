@@ -64,7 +64,15 @@ done
 <summary> Expand for the answer </summary>
 
 #### Answer:
-> First you have to pause it with **Ctrl + z** than you have to run `bg`
+> First you have to pause it with `Ctrl + z` then you have to run `bg`
+</details>
+
+4. ##### Is there a way to start the script running directly in the background?
+<details>
+<summary> Expand for the answer </summary>
+
+#### Answer:
+> The answer is **Yes**. You have to run the script as follows: ./myScript.sh &
 </details>
 
 
