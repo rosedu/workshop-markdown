@@ -100,7 +100,7 @@ done
 > This above is an image from my fork so it will be here until I delete it locally.
 <br>
 
-5. ![DO NOT CLICK](https://www.lua.org/)
+5. [DO NOT CLICK](https://www.lua.org/)
 <br>
 
 > [!NOTE]
