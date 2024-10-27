@@ -4,7 +4,7 @@
 
 ### There will be separate sections so to present the GFM (Github Flavoured Markdown)<br><br>
 
-#### First section<br><br>
+#### First Section<br><br>
 
 | Cars | Model | Engine Type | Year |
 | ---- | ----- | ------ | ---- |
@@ -31,7 +31,7 @@
 > To continue, you need a bit of Bash scripting and Linux knowledge.
 <br>
 
-#### Second section
+#### Second Section
 
 1. ##### What does the following code snippet do?
 
@@ -74,5 +74,11 @@ done
 #### Answer:
 > The answer is **Yes**. You have to run the script as follows: `./myScript.sh &`
 </details>
+<br>
+
+> [!IMPORTANT]
+> In order to proceed further, you should have known the answer to at least 2 out of 4 questions above!
+
+#### Third Section
 
 
