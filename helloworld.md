@@ -74,187 +74,185 @@ Run with:
 ```
 
 # Dlang
+```console
 
+import std.stdio;
 
+void main()
+{
+    writeln("Hello, World!");
+}
+```
+Build with:
 
+```console
+gdc -Wall -o helloworld helloworld.cpp
+```
 
+Run with:
 
-
-
-
-
-
-
+```console
+./helloworld
+```
 
 # Go
+```console
 
+package main
 
+import "fmt"
 
+func main() {
+    fmt.Println("Hello, World!")
+}
+```
+Build and run with:
 
-
-
-
-
-
-
-
-
-
+```console
+go run helloworld.go
+```
 
 # Rust
+```console
 
+fn main() {
+    println!("Hello, World");
+}
+```
+Build with:
 
+```console
+rustc hello.rs
+```
 
+Run with:
 
-
-
-
-
-
-
-
-
-
+```console
+./helloworld
+```
 # Java
+```console
 
+public class HelloWorld {
+    public static void main(String[] args) {
+        System.out.println("Hello, World!");
+    }
+}
+```
+Build with:
 
+```console
+javac HelloWorld.java
+```
 
+Run with:
 
-
-
-
-
-
-
-
-
+```console
+java HelloWorld
+```
 # x86_64 assembly
+```console
 
+#include <iostream>
 
+int main()
+{
+    std::cout << "Hello, World!" << std::endl;
+    return 0;
+}
+```
+Build with:
 
+```console
+g++ -Wall -o helloworld helloworld.cpp
+```
 
+Run with:
 
-
-
-
-
-
-
-
-
-
+```console
+./helloworld
+```
 # ARM64 assembly
+```console
 
+#include <iostream>
 
+int main()
+{
+    std::cout << "Hello, World!" << std::endl;
+    return 0;
+}
+```
+Build with:
 
+```console
+g++ -Wall -o helloworld helloworld.cpp
+```
 
+Run with:
 
-
-
-
-
-
-
-
-
-
-
+```console
+./helloworld
+```
 # Bash
+```console
 
+echo "Hello, World!"
+```
+Run with:
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+```console
+bash helloworld.sh
+```
 # Python
+```console
 
+print("Hello, World!")
+```
+Run with:
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+```console
+python helloworld.py
+```
 # Ruby
+```console
 
+puts "Hello, World!"
+```
+Run with:
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+```console
+ruby helloworld.rb
+```
 # PHP
+```console
 
+<?php
+echo "Hello, World!"
+?>
+```
+Run with:
 
-
-
-
-
-
-
-
-
-
-
-
-
+```console
+./helloworld
+```
 # Perl
+```console
 
+print("Hello, World!\n")
+```
+Run with:
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+```console
+perl helloworld.pl
+```
 # Lua
+```console
 
+print("Hello, World!")
+```
+Run with:
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+```console
+lua helloworld.lua
+```
