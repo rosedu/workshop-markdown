@@ -51,7 +51,8 @@ done
 > It prints the message between double quotes every hour until it is stopped.
 </details>
 
-2. ##### Was the previous code working in the background or foreground?
+<!-- 2. ##### Was the previous code working in the background or foreground? -->
+2. <h4 style="color: cyan;">Was the previous code working in the background or foreground?</h4>
 
 <details>
 <summary> Expand for the answer </summary>
