@@ -18,7 +18,7 @@ The table below summarizes the programs:
 | Rust | [Rust Programming Language](https://www.rust-lang.org/) | [Rust](#rust) | Rust(Crate) | rustlang |
 | Java | [Java Programming Language](https://docs.oracle.com/javase/8/docs/technotes/guides/language/#:~:text=The%20Java%E2%84%A2%20Programming%20Language,the%20Java%20Virtual%20Machine%20Specification.) | [Java](#java) | JDK | openjdk-17-jdk |
 | x86_64 assembly | [x86 and amd64 instruction reference](https://www.felixcloutier.com/x86/) | [x86_64 Assembly](#x86_64-assembly) | GCC / GAS | build-essential |
-| ARM64 Assembly | [Arm A64 Instruction Set Architecture](https://developer.arm.com/documentation/ddi0596/latest/) | [ARM64<br> Assembly](#arm64-assembly) | GCC / GAS (AArch) | build-essential |
+| ARM64 Assembly | [Arm A64 Instruction Set Architecture](https://developer.arm.com/documentation/ddi0596/latest/) | [ARM64<br> Assembly](#arm64-assembly) | GCC / GAS<br> (AArch64) | build-essential |
 | Bash | [Bash Reference Manual](https://www.gnu.org/software/bash/) | [Bash](#bash) | Bash | bash |
 | Python | [Welcome to Python.org](https://www.python.org/) | [Python](#python) | Python | python |
 | Ruby | [Ruby Programming Language](https://www.ruby-lang.org/en/) | [Ruby](#ruby) | Ruby | ruby |
