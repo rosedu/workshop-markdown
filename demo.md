@@ -206,3 +206,9 @@ public class Singleton {
 </details>
 <br>
 
+#### Fifth Section
+
+##### What is your favourite emoji?
+##### Some of the most popular emojis are listed below: 
+:laughing: :smiley: :wink:
+
