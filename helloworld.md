@@ -9,7 +9,7 @@ The table below summarizes the programs:
 
 | Language | Lnaguage (Spec) Site | Section | Build / Run Toolchain | Debian / Ubuntu Packages |
 | -------- | -------------------- | ------- | --------------------- | ------------------------ |
-| C        | [The Standard - C](https://www.iso-9899.info/wiki/The_Standard)| [https://github.com/florianAriasu/workshop-markdown/blob/cdl-26/helloworld.md#c](#c) | GCC | build-essetial |
+| C        | [The Standard - C](https://www.iso-9899.info/wiki/The_Standard)| [C](#c) | GCC | build-essetial |
 | C++ | [The Standard - C++](https://isocpp.org/std/the-standard) | C++ | GCC / G++ | build-essential, g++ |
 | Dlang | [D Programming Language: Home](https://dlang.org/) | Dlang | GCC / GDC | build-essential, gdc |
 | Go | [The Go Programming Language](https://go.dev/) | Go | Go | golang |
