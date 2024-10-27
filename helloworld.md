@@ -23,3 +23,5 @@ The table below summarizes the programs:
 | PHP | [PHP: Hypertext Preprocessor](https://www.php.net/) | PHP | PHP | php |
 | Perl | [The Perl Programming Language](https://www.perl.org/) | Perl | Perl | perl |
 | Lua | [The Programming Language Lua](https://www.lua.org/) | Lua | Lua | lua |
+
+# C
