@@ -87,3 +87,8 @@ done
 1. [This is a link to my first section](#first-section)
 2. [This is a link to my second section](#second-section)
 3. [Click Me](https://as1.ftcdn.net/v2/jpg/02/88/70/42/1000_F_288704290_6zTQAmnEn4kdWxIxvQ8PAmQtT3SBtYYq.jpg)
+
+> [!NOTE]
+> This above is an image from the web and if the image is removed, then it won t show up in the repo as well when clicked
+
+
