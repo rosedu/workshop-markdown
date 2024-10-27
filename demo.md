@@ -4,7 +4,7 @@
 
 ### There will be separate sections so to present the GFM (Github Flavoured Markdown)<br><br>
 
-#### This is the first section and is a table containing details of some random cars<br><br>
+#### First section<br><br>
 
 | Cars | Model | Engine Type | Year |
 | ---- | ----- | ------ | ---- |
@@ -48,7 +48,7 @@ done
 <summary> Expand for the answer </summary>
 
 #### Answer:
-> It prints the message between double quotes every hour untill is stopped.
+> It prints the message between double quotes every hour until it is stopped.
 </details>
 
 
