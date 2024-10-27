@@ -111,5 +111,44 @@ done
 > It s safe! All external links above use `https` protocol
 <br>
 
+#### Questions:
+
+- ##### What is the md format for images?
+<details>
+<summary> Expand for the answer </summary>
+
+#### Answer:
+> ![alt text](link-to-image)
+</details>
+<br>
+
+- ##### What is the md format for links?
+<details>
+<summary> Expand for the answer </summary>
+
+#### Answer:
+> [alt text](external-link)
+</details>
+<br>
+
+- ##### What are the 2 major link types in an md file?
+<details>
+<summary> Expand for the answer </summary>
+
+#### Answer:
+> Internal and external
+</details>
+<br>
+
+- ##### What happens if an external link whose image was deleted was included in an md file?
+<details>
+<summary> Expand for the answer </summary>
+
+#### Answer:
+> The image won t be available anymore.
+</details>
+<br>
+
+#### Forth Section
 
 
