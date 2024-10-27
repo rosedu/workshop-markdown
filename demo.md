@@ -1,10 +1,10 @@
 <!-- This is my very first md file -->
 
-# This is my very first md file done entirely by me<br><br>
+# This is my very first md file done entirely by me<br>
 
 ### There will be separate sections so to present the GFM (Github Flavoured Markdown)<br><br>
 
-#### This is the first section and is a table containing details of some random cars<br>
+#### This is the first section and is a table containing details of some random cars<br><br>
 
 | Cars | Model | Engine Type | Year |
 | ---- | ----- | ------ | ---- |
@@ -14,7 +14,7 @@
 | Honda | Gasoline | Civic | 2018 |
 | Audi | A6 | Diesel | 2020 |
 
-<br><br>
+<br>
 
 > [!NOTE]
 > Note that there is a Romanian car brand as well, spot it!
