@@ -250,7 +250,7 @@ public class Singleton {
 }
 ```
 
-- This is an example using STL 3D Models
+- This is an example using [STL 3D Models](https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/creating-diagrams#creating-stl-3d-models)
 
 ```stl
 solid cube_corner
