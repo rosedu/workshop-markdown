@@ -1,7 +1,7 @@
 # Linkare dinamică
 
 Linkarea dinamică înseamnă că în executabil nu sunt incluse componentele folosite din bibliotecă.
-Acestea vor fi incluse mai târziu, la încărcare (*load time*) sau chiar la rulare (*runtime).
+Acestea vor fi incluse mai târziu, la încărcare (*load time*) sau chiar la rulare (*runtime*).
 În urma linkării dinamice, executabilul reține referințe la bibliotecile folosite și la simbolurile folosite din cadrul acestora.
 Aceste referințe sunt similare unor simboluri nedefinite.
 Rezolvarea acestor simboluri are loc mai târziu, prin folosirea unui loader / linker dinamic.
@@ -13,7 +13,7 @@ Diferența este că acum, folosim linkare dinamică în loc de linkare statică 
 Pentru aceasta, am renunțat la argumentul `-static` folosit la linkare.
 
 Pentru acest exemplu, obținem un singur executabil `main`, din legarea statică cu biblioteca `libinc.a` și legarea dinamică cu biblioteca standard C.
-Similar exemplului din directorul `05-static/, folosim comanda `make` pentru a obține executabilul `main`:
+Similar exemplului din directorul `05-static/`, folosim comanda `make` pentru a obține executabilul `main`:
 
 ```console
 [..]/06-dynamic$ ls
@@ -39,11 +39,11 @@ main: ELF 32-bit LSB executable, Intel 80386, version 1 (SYSV), dynamically link
 
 [..]/06-dynamic$ file ../05-static/main
 ../05-static/main: ELF 32-bit LSB executable, Intel 80386, version 1 (GNU/Linux), statically linked, for GNU/Linux 3.2.0, BuildID[sha1]=60adf8390374c898998c0b713a8b1ea0c255af38, not stripped
-``
+```
 
 Fișierul executabil `main` obținut prin linkare dinamică are un comportament identic fișierului executabil `main` obținut prin linkare statică.
 Observăm că dimensiunea sa este mult mai redusă: ocupă `7 KB` comparativ cu `600 KB` cât avea varianta sa statică.
-De asemenea, folosind utilitarul `file`, aflăm că este executabil obținut prin linkare dinamică (*dynamically linked*), în vreme cel obținut în exemplul anterior este executabil obținut prin linkare statică (*statically linked).
+De asemenea, folosind utilitarul `file`, aflăm că este executabil obținut prin linkare dinamică (*dynamically linked*), în vreme cel obținut în exemplul anterior este executabil obținut prin linkare statică (*statically linked*).
 
 Investigăm simbolurile executabilului:
 
