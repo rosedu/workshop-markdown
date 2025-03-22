@@ -1,7 +1,7 @@
 # Linkare dinamică
 
 Linkarea dinamică înseamnă că în executabil nu sunt incluse componentele folosite din bibliotecă.
-Acestea vor fi incluse mai târziu, la încărcare (*load time*) sau chiar la rulare (*runtime).
+Acestea vor fi incluse mai târziu, la încărcare (_load time_) sau chiar la rulare (runtime).
 În urma linkării dinamice, executabilul reține referințe la bibliotecile folosite și la simbolurile folosite din cadrul acestora.
 Aceste referințe sunt similare unor simboluri nedefinite.
 Rezolvarea acestor simboluri are loc mai târziu, prin folosirea unui loader / linker dinamic.
@@ -13,9 +13,9 @@ Diferența este că acum, folosim linkare dinamică în loc de linkare statică 
 Pentru aceasta, am renunțat la argumentul `-static` folosit la linkare.
 
 Pentru acest exemplu, obținem un singur executabil `main`, din legarea statică cu biblioteca `libinc.a` și legarea dinamică cu biblioteca standard C.
-Similar exemplului din directorul `05-static/, folosim comanda `make` pentru a obține executabilul `main`:
+Similar exemplului din directorul `05-static/, folosim comanda `make`pentru a obține executabilul`main`:
 
-```console
+````console
 [..]/06-dynamic$ ls
 inc.c  inc.h  main.c  Makefile
 
@@ -62,11 +62,11 @@ Investigăm simbolurile executabilului:
 [...]
 08048330 T _start
 [...]
-```
+````
 
 Simbolurile obținute din modulul obiect `main.o` și din biblioteca statică `libinc.o` sunt rezolvate și au adrese stabilite.
 Observăm că folosirea bibliotecii standard C a dus la existența simboblului `_start`, care este entry pointul programului.
-Dar, simbolurile din biblioteca standard C, (`printf`, __libc_start_main`) sunt marcate ca nedefinite (`U`).
+Dar, simbolurile din biblioteca standard C, (`printf`, \_\_libc_start_main`) sunt marcate ca nedefinite (`U`).
 Aceste simboluri nu sunt prezente în executabil: rezolvarea, stabilirea adreselor și relocarea lor se va realiza mai târziu, la încărcare (load time).
 
 La încărcare, o altă componentă software a sistemului, loaderul / linkerul dinamic, se va ocupa de:
@@ -79,10 +79,11 @@ Putem investiga bibliotecile dinamice folosite de un executabil prin intermediul
 
 ``console
 [..]/06-dynamic$ ldd main
-	linux-gate.so.1 (0xf7f97000)
-	libc.so.6 => /lib/i386-linux-gnu/libc.so.6 (0xf7d8a000)
-	/lib/ld-linux.so.2 (0xf7f98000)
-```
+linux-gate.so.1 (0xf7f97000)
+libc.so.6 => /lib/i386-linux-gnu/libc.so.6 (0xf7d8a000)
+/lib/ld-linux.so.2 (0xf7f98000)
+
+````
 
 În rezultatul de mai sus, observăm că executabilul folosește biblioteca standard C, localizată la calea `/lib/i386-linux-gnu/libc.so.6`.
 `/lib/ld-linux.so.2` este loaderul / linkerul dinamic.
@@ -140,7 +141,7 @@ inc.c  inc.h  inc.o  libinc.so  main  main.c  main.o  Makefile
          U read
 [...]
 08048440 T _start
-```
+````
 
 Executabilul obținut are dimensiunea în jur de `7 KB` puțin mai mică decât a executabilului din exemplul anterior.
 Diferența cea mai mare este că, acum, simbolurile din biblioteca `libinc.so` (`increment`, `init`, `print`, `read`) sunt nerezolvate.
@@ -152,7 +153,7 @@ Dacă încercăm lansarea în execuție a executabilului, observăm că primim o
 ./main: error while loading shared libraries: libinc.so: cannot open shared object file: No such file or directory
 ```
 
-Eroarea spune că nu poate localiza biblioteca `libinc.so` la încărcare (*loading*).
+Eroarea spune că nu poate localiza biblioteca `libinc.so` la încărcare (_loading_).
 Este deci, o eroare de loader.
 
 O eroare similară obținem dacă folosim utilitarul `ldd`:
@@ -170,7 +171,7 @@ La fel, biblioteca `libinc.so` nu este găsită.
 Motivul este că nu am precizat loaderului unde să caute biblioteca partajată.
 Loaderul are definită calea unde să caute biblioteca standard C (`/lib/i386-linux-gnu/libc.so.6`), dar nu deține informații despre `libinc.so`.
 
-Ca să precizăm loaderului calea către bibliotecă, o cale simplă, de test, este folosirea variabilei de mediu `LD_LIBRARY_PATH`, pe care o inițializăm la directorul curent (`.` - *dot*).
+Ca să precizăm loaderului calea către bibliotecă, o cale simplă, de test, este folosirea variabilei de mediu `LD_LIBRARY_PATH`, pe care o inițializăm la directorul curent (`.` - _dot_).
 Odată folosită variabila de mediu `LD_LIBRARY_PATH`, lansarea în execuție a executabilului va funcționa, la fel și folosirea `ldd`:
 
 ```console
