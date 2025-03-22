@@ -1,7 +1,7 @@
 # Linkare dinamică
 
 Linkarea dinamică înseamnă că în executabil nu sunt incluse componentele folosite din bibliotecă.
-Acestea vor fi incluse mai târziu, la încărcare (_load time_) sau chiar la rulare (runtime).
+Acestea vor fi incluse mai târziu, la încărcare (_load time_) sau chiar la rulare (_runtime_).
 În urma linkării dinamice, executabilul reține referințe la bibliotecile folosite și la simbolurile folosite din cadrul acestora.
 Aceste referințe sunt similare unor simboluri nedefinite.
 Rezolvarea acestor simboluri are loc mai târziu, prin folosirea unui loader / linker dinamic.
@@ -65,7 +65,7 @@ Investigăm simbolurile executabilului:
 ```
 
 Simbolurile obținute din modulul obiect `main.o` și din biblioteca statică `libinc.o` sunt rezolvate și au adrese stabilite.
-Observăm că folosirea bibliotecii standard C a dus la existența simboblului `_start`, care este entry pointul programului.
+Observăm că folosirea bibliotecii standard C a dus la existența simbolului `_start`, care este entry pointul programului.
 Dar, simbolurile din biblioteca standard C, (`printf`, \_\_libc_start_main`) sunt marcate ca nedefinite (`U`).
 Aceste simboluri nu sunt prezente în executabil: rezolvarea, stabilirea adreselor și relocarea lor se va realiza mai târziu, la încărcare (load time).
 
