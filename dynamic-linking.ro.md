@@ -1,6 +1,6 @@
-# Linkare dinamică
+# Linkare dinamică-fixed errors
 
-Linkareeeeaaaa dinamică înseamnă că în executabil nu sunt incluse componentele folosite din bibliotecă.
+Linkarea dinamică înseamnă că în executabil nu sunt incluse componentele folosite din bibliotecă.
 Acestea vor fi incluse mai târziu, la încărcare (*load time*) sau chiar la rulare (*runtime).
 În urma linkării dinamice, executabilul reține referințe la bibliotecile folosite și la simbolurile folosite din cadrul acestora.
 Aceste referințe sunt similare unor simboluri nedefinite.
