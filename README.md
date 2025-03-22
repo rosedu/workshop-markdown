@@ -297,3 +297,50 @@ Follow the steps:
 1. Create commits with the updates to the `README.md` file.
    Push commits to the GitHub remote repository.
    Now check your resulting profile page on your GitHub page.
+
+## Create a Website with GitHub and Markdown
+
+We can use the contents of a GitHub repository, written with Markdown, to create a website.
+This feature is called [GitHub Pages](https://docs.github.com/en/pages).
+
+This is, for example, how the [Hardware-Software Interface website](https://cs-pub-ro.github.io/hardware-software-interface) is constructed, from the [corresponding `cs-pub-ro/hardware-software-interface` repository](https://github.com/cs-pub-ro/hardware-software-interface).
+And the [Operating Systems website](https://cs-pub-ro.github.io/operating-systems/) also from the [corresponding `cs-pub-ro/operating-systems` repository](https://github.com/cs-pub-ro/operating-systems).
+
+The content of this repository is published at: https://rosedu.github.io/workshop-markdown/
+The main page of the website (https://rosedu.github.io/workshop-markdown/) is a rendering of `README.md`.
+
+There are also renderings of the other pages:
+
+- `README.github.md` is rendered at https://rosedu.github.io/workshop-markdown/README.github.html
+- `dynamic-linking.ro.md` is rendered at https://rosedu.github.io/workshop-markdown/dynamic-linking.ro.html
+
+To render these Markdown files as a website using GitHub Pages, we followed the instructions [here](https://docs.github.com/en/pages/getting-started-with-github-pages/creating-a-github-pages-site#creating-your-site).
+The image below presents the configuration we did to configure GitHub Pages.
+
+![GitHub Pages Settings](./github-pages-settings.png)
+
+### Do It for Your Fork
+
+Do the same configuration as above for your repository fork, at `https://github.com/<your-github-username>/workshop-markdown`.
+Replace the `<your-github-username>` string above with your username on GitHub.
+
+When configuring the repository in the `Settings` screen, the `Pages` option on your GitHub repository interface, use your own branch `cdl-..` as the publishing source.
+
+If all is done correctly, you will be able to see the Markdown files rendered:
+
+- `README.md` will be rendered at `https://<your-github-username>.github.io/workshop-markdown/`
+- `README.github.md` will be rendered at `https://<your-github-username>.github.io/workshop-markdown/README.github.html`
+- `dynamic-linking.ro.md` is rendered at `https://<your-github-username>.github.io/workshop-markdown/dynamic-linking.ro.html`
+- `dynamic-linking.ro.md` is rendered at `https://<your-github-username>.github.io/workshop-markdown/helloworld.html`
+
+### Create a Website from a Repository
+
+Create a new separate repository on GitHub and create a website from it, adding content in Markdown.
+Name it as you want and use content (in Markdown) as you want.
+Make it personal, make it fun, use your imagination.
+
+We recommend you use the `docs/` directory in the repository to store the website content.
+Outside `docs/` you will have content not rendered.
+
+Then configure the repository to be rendered using GitHub Pages.
+See its contents at `https://<your-github-username>.github.io/<repository-name>/`.
