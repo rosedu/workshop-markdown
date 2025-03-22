@@ -102,7 +102,7 @@ De aici este, în Linux, extensia `.so` a fișierelor de tip bibliotecă partaja
 Numele corect al unei biblioteci dinamice este bibliotecă cu linkare dinamică (*dynamically linked library*) sau bibliotecă partajată.
 În Windows, bibliotecile dinamice sunt numite *dynamic-link libraries* de unde și extensia `.dll`.
 
-Din punctul de vedere al comenzii folosite, nu diferă linkarea unei biblioteci dinamice sau a unei biblioci statice.
+Din punctul de vedere al comenzii folosite, nu diferă linkarea unei biblioteci dinamice sau a unei biblioteci statice.
 Diferă executabilul obținut, care va avea nedefinite simbolurile folosite din bibliotecile dinamice.
 De asemenea, loaderul / linkerul dinamic trebuie să fie informat de locul bibliotecii dinamice.
 
