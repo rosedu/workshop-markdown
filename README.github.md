@@ -12,6 +12,17 @@ cd workshop-github/
 
 And let's get going! 🚀
 
+> [!NOTE]
+> If, at any point in time, you miss a command, or something bad simply happened, reset the environment by running:
+>
+> ```console
+> ./gh-reset-repo.sh
+> ```
+
+> [!IMPORTANT]
+> We recommend you write all commands below by hand, i.e. without using copy & paste.
+> This will get you better accustomed to GitHub-related commands.
+
 ## View GitHub Repositories
 
 Take a look at the following repositories:
@@ -32,7 +43,7 @@ Do a tour of as much information as possible about them:
 Take a look at the [GitHub projects for the `unikraft` organization](https://github.com/orgs/unikraft/projects).
 Browse the projects.
 
-Look at the [`Release - Next` GitHub project](https://github.com/orgs/unikraft/projects/47).
+Look at the [`Release - Next` GitHub project](https://github.com/orgs/unikraft/projects/49).
 Browse the items in the list.
 Browse different views (tabs) in the projects.
 
@@ -89,10 +100,31 @@ git clone https://github.com/nodejs/node
 
 For each repository, use the GitHub CLI tool to:
 
-- List repository issues with `gh issue list`.
-- List repository pull requests with `gh pr list`.
-- List repository pull requests whose state is `closed` with `gh pr list -s closed`.
-- View details about a pull request with `gh pr view <PR_ID>`.
+- List repository issues:
+
+  ```console
+  gh issue list
+  ```
+
+- List repository pull requests:
+
+  ```console
+  gh pr list
+  ```
+
+- List repository pull requests whose state is `closed`:
+
+  ```console
+  gh pr list -s closed
+  ```
+
+- View details about a pull request:
+
+  ```console
+  gh pr view <PR_ID>
+  ```
+
+  where `<PR_ID>` is the PR number.
 
 ## Create Work GitHub Repository
 
@@ -224,7 +256,8 @@ For this, do the following:
 1. Ask someone around you for their GitHub username.
    Add them to the repository as collaborator.
 
-1. Ask them to confirm the invite via e-mail or by accessing the invitation URL: `https://github.com/<your-github-username>/workshop-github/invitations`
+1. Ask them to confirm the invite via e-mail or by accessing the invitation URL: `https://github.com/<your-github-username>/workshop-github/invitations`.
+   Replace `<your-github-username>` with your GitHub username.
 
 1. Ask them to approve your pull request.
 
@@ -284,9 +317,9 @@ Before this, do a reset of your repository:
 ./gh-reset-repo.sh
 ```
 
-Each of view should now:
+Each of you should do the following:
 
-1. Create of fork of the other's repository.
+1. Create a fork of the other's repository.
    Be sure to give it a different name, not to clash with your own `workshop-github` repository name.
 
 1. Clone the fork locally:
@@ -295,6 +328,8 @@ Each of view should now:
    git clone <fork_url>
    cd <clone_directory>
    ```
+
+   where `<fork_url>` is the URL of the other's repository, and `<clone_directory>` is the directory of the repository clone.
 
 1. Create a branch and commit(s) from `c-bye`.
 
