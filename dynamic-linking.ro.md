@@ -65,7 +65,7 @@ Investigăm simbolurile executabilului:
 
 Simbolurile obținute din modulul obiect `main.o` și din biblioteca statică `libinc.o` sunt rezolvate și au adrese stabilite.
 Observăm că folosirea bibliotecii standard C a dus la existența simboblului `_start`, care este entry pointul programului.
-Dar, simbolurile din biblioteca standard C, (`printf`, __libc_start_main`) sunt marcate ca nedefinite (`U`).
+Dar, simbolurile din biblioteca standard C, (`printf`, __`libc_start_main`) sunt marcate ca nedefinite (`U`).
 Aceste simboluri nu sunt prezente în executabil: rezolvarea, stabilirea adreselor și relocarea lor se va realiza mai târziu, la încărcare (load time).
 
 La încărcare, o altă componentă software a sistemului, loaderul / linkerul dinamic, se va ocupa de:
