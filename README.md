@@ -4,24 +4,33 @@ This is a practical workshop about the syntax and the use of the [Markdown forma
 In particular, we will focus on the [GitHub Flavored Markdown](https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax), used by GitHub.
 See the full specification of the GitHub Flavored Markdown [here](https://github.github.com/gfm/).
 
-First of all, fork [this repository](https://github.com/rosedu/workshop-markdown).
-And then create a clone of your fork:
+> [!NOTE]
+> Markdown is not only used in GitHub / GitLab and other software development platforms, but also in chat message engines such as [Discord](https://discord.com/), note taking apps such as [HackMD](https://hackmd.io/) and wiki engines such as [MDwiki](https://mdwiki.info).
+> Parts of the Markdown syntax are also used on WhatsApp, MS Teams and other chat message engines, particularly for text formatting.
 
-```console
-git clone https://github.com/<your-github-username>/workshop-markdown
-# Or git clone git@github.com:<your-github-username>/workshop-markdown
-cd workshop-markdown/
-```
+## Set Up
 
-Choose one of the two clone commands above to either clone via HTTPS (personal access token is required) or via Git (public SSH key needs to be configured).
-Replace `<your-github-username>` above with your GitHub username.
+To set up the workshop environment, follow the steps:
 
-Add the `upstream` remote to point to the [upstream repository](https://github.com/rosedu/workshop-markdown):
+1. First of all, fork [this repository](https://github.com/rosedu/workshop-markdown).
+   Use the `Fork` button on the top right of the repository page.
 
-```console
-git remote add upstream https://github.com/rosedu/workshop-markdown
-git fetch upstream
-```
+1. Create a local clone of your fork:
+
+   ```console
+   git clone git@github.com:<your-github-username>/workshop-markdown
+   cd workshop-markdown/
+   ```
+
+   Make sure you have a [public SSH key configured](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account) for your GitHub account, in order to clone the repository.
+   Replace the `<your-github-username>` string above with your username on GitHub.
+
+1. Add the `upstream` remote to point to the [upstream repository](https://github.com/rosedu/workshop-markdown):
+
+   ```console
+   git remote add upstream https://github.com/rosedu/workshop-markdown
+   git fetch upstream
+   ```
 
 And let's get going! 🚀
 
@@ -31,7 +40,7 @@ Let's start with checking how Markdown is being used in public repositories.
 
 ### This Repository
 
-Firstly, see this `README.md` file:
+First, see this `README.md` file:
 
 ```console
 cat README.md
@@ -43,7 +52,7 @@ Also check the [`README.github.md` file](#README.github.md), a direct copy of th
 To see the actual contents of a file on GitHub (such as the [`README.md` file in the `workshop-github` repository](https://github.com/rosedu/workshop-github)), click the `Raw` button in the top-right corner.
 You'll get to [this page](https://raw.githubusercontent.com/rosedu/workshop-github/refs/heads/main/README.md) in raw format.
 
-Identify syntax aspects from those list in the documentation for [GitHub Flavored Markdown](https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax).
+Identify syntax aspects in the documentation for [GitHub Flavored Markdown](https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax).
 See:
 
 - The use of `#`, `##`, `###` for section headings.
@@ -97,7 +106,7 @@ This means you will follow the steps:
 1. Create a pull request from that push.
    The pull request must be target **to** your assigned branch (**not** the `main` branch).
 
-## Correct Markdown File
+## Fix a Markdown File
 
 The [`dynamic-linking.ro.md` Markdown file](dynamic-linking.ro.md) has errors in it.
 Fix these errors as part of a pull request.
@@ -112,6 +121,9 @@ Make updates as required.
 Have your pull request approved and merged on top of your assigned branch.
 
 Check the GitHub web view of the [upstream repository](https://github.com/rosedu/workshop-markdown) for your assigned branch.
+Click on the button with `main` (the branch button) and select your branch.
+
+Check the contents of the `dynamic-linking.ro.md` file and see if it is now rendered correctly.
 
 ### Clean Up After Pull Request
 
@@ -154,35 +166,36 @@ That is:
    git log
    ```
 
-## Create Markdown File
+## Create a Markdown File
 
 The `helloworld-print.pdf` file is a PDF print of a GitHub view of a Markdown file.
 Create the `helloworld.md` file that will generate that precise GitHub view.
 
-**Note**: The first large "Hello, World!" message is an image file: the file `helloworld.png` in the repository.
+> [!NOTE]
+> The first large "Hello, World!" message is an image file: the file `helloworld.png` in the repository.
 
 Make sure you do the following:
 
-- Start by creating a branch where you do you work.
-  This will be the branch **from** where you will create a pull request.
-  As usual, the future pull request will target your assigned branch in the [upstream repository](https://github.com/rosedu/workshop-markdown).
+1. Start by creating a branch where you do your work.
+   This will be the branch **from** where you will create a pull request.
+   As usual, the future pull request will target your assigned branch in the [upstream repository](https://github.com/rosedu/workshop-markdown).
 
-- Copy-paste contents from the PDF file.
-  Do not write programs by hand.
+1. Copy-paste contents from the PDF file.
+   Do not write programs by hand.
 
-- Use correct syntax items for typewriter format, links to sections, code snippet format, tables.
-  See [the GitHub Markdown spec](https://github.github.com/gfm/).
+1. Use correct syntax items for typewriter format, links to sections, code snippet format, tables.
+   See [the GitHub Markdown spec](https://github.github.com/gfm/).
 
-- Create and or update commits.
-  Do periodic (force) pushes of the work branch:
+1. Create and or update commits.
+   Do periodic (force) pushes of the work branch:
 
-  ```console
-  git push --force origin <work-branch>
-  ```
+   ```console
+   git push --force origin <work-branch>
+   ```
 
-  After each push, check the GitHub view of the work branch in your fork of the GitHub repository.
+   After each push, check the GitHub view of the work branch in your fork of the GitHub repository.
 
-After completing the task, submit the `helloworld.md` Markdown file as part of a pull request.
+1. After completing the task, submit the `helloworld.md` Markdown file as part of a pull request.
 
 Follow the instructions above to create the pull request.
 Make sure you have good commit messages and a good pull request description.
@@ -194,6 +207,9 @@ Make updates as required.
 Have your pull request approved and merged on top of your assigned branch.
 
 Check the GitHub web view of the [upstream repository](https://github.com/rosedu/workshop-markdown) for your assigned branch.
+Click on the button with `main` (the branch button) and select your branch.
+
+Check the contents of the `helloworld.md` file and see if it is now rendered correctly.
 
 ### Clean Up After Pull Request
 
@@ -243,15 +259,16 @@ You can check the profile pages below as examples:
 - [Maria Sfîrăială](https://github.com/mariasfiraiala)
 
 The profile pages are rendered from a standard repository named **exactly** as the account name.
+We will call this repository the **profile repository**.
 See the contents of each account repository for the above accounts:
 
 - https://github.com/andreia-oca/andreia-oca
-- https://github.com/gabrielmocanu/gabriel-mocanu
+- https://github.com/gabrielmocanu/gabrielmocanu
 - https://github.com/craciunoiuc/craciunoiuc
 - https://github.com/mariasfiraiala/mariasfiraiala
 
 The repository consists of a single `README.md` Markdown file.
-This `README.md` file in the `.github` repository is automatically rendered by GitHub on the account profile page.
+This `README.md` file in the profile repository is automatically rendered by GitHub on the account profile page.
 
 Check the raw contents of `README.md` files above to see how the profile page is created.
 
@@ -260,25 +277,23 @@ Check the raw contents of `README.md` files above to see how the profile page is
 Create your own GitHub profile page.
 Follow the steps:
 
-1. Create a repository called `.github` repository on GitHub.
+1. Create your GitHub profile repository named **exactly** as your account name.
    Initialize it with a simple `README.md` file as instructed in the repository creation screen.
-   This is the profile repository.
 
 1. See the initial output of the repository on your GitHub page.
 
 1. Clone the profile repository locally:
 
    ```console
-   git clone https://github.com/<your-github-username>/.github
-   # Or git clone git@github.com:<your-github-username>/.github
-   cd .github
+   git clone git@github.com:<your-github-username>/<your-github-username>
+   cd <your-github-username>
    ```
 
-   Choose one of the two clone commands above to either clone via HTTPS (personal access token is required) or via Git (public SSH key needs to be configured).
+   Replace the `<your-github-username>` string above with your username on GitHub.
 
 1. Update the `README.md` file in the repository with the contents you want for your profile.
    Take inspiration from the GitHub profile pages above.
 
 1. Create commits with the updates to the `README.md` file.
    Push commits to the GitHub remote repository.
-   Now check your resulting profile page on GitHub.
+   Now check your resulting profile page on your GitHub page.
