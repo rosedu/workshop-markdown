@@ -177,11 +177,17 @@ Create the `helloworld.md` file that will generate that precise GitHub view.
 Make sure you do the following:
 
 1. Start by creating a branch where you do your work.
+   Use `helloworld` for the branch name:
+
+   ```console
+   git checkoout -b helloworld
+   ```
+
    This will be the branch **from** where you will create a pull request.
    As usual, the future pull request will target your assigned branch in the [upstream repository](https://github.com/rosedu/workshop-markdown).
 
 1. Copy-paste contents from the PDF file.
-   Do not write programs by hand.
+   Open the `helloworld-print.pdf` file in a PDF viewer, select text, copy in the `helloworld.md` file.
 
 1. Use correct syntax items for typewriter format, links to sections, code snippet format, tables.
    See [the GitHub Markdown spec](https://github.github.com/gfm/).
@@ -195,21 +201,18 @@ Make sure you do the following:
 
    After each push, check the GitHub view of the work branch in your fork of the GitHub repository.
 
+   Check the contents of the `helloworld.md` file on your GitHub fork and see if it is now rendered correctly.
+
 1. After completing the task, submit the `helloworld.md` Markdown file as part of a pull request.
 
-Follow the instructions above to create the pull request.
-Make sure you have good commit messages and a good pull request description.
+   Follow the instructions above to create the pull request.
+   Make sure you have good commit messages and a good pull request description.
 
-Target the pull request **to** your assigned branch.
+   Target the pull request **to** your assigned branch.
 
-Ask the instructors to review your pull request.
-Make updates as required.
-Have your pull request approved and merged on top of your assigned branch.
-
-Check the GitHub web view of the [upstream repository](https://github.com/rosedu/workshop-markdown) for your assigned branch.
-Click on the button with `main` (the branch button) and select your branch.
-
-Check the contents of the `helloworld.md` file and see if it is now rendered correctly.
+1. Ask the instructors to review your pull request.
+   Make updates as required.
+   Have your pull request approved and merged on top of your assigned branch.
 
 ### Clean Up After Pull Request
 
