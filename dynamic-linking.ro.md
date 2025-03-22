@@ -42,7 +42,7 @@ main: ELF 32-bit LSB executable, Intel 80386, version 1 (SYSV), dynamically link
 ``
 
 Fișierul executabil `main` obținut prin linkare dinamică are un comportament identic fișierului executabil `main` obținut prin linkare statică.
-Observăm că dimensiunea sa este mult mai redusă: ocupă `7 KB` comparativ cu `600 KB` cât avea varianta sa statică.
+Observăm că dimensiunea sa este mult mai redusă: ocupă `7 KB` in comparatie cu `600 KB` cât avea varianta sa statică.
 De asemenea, folosind utilitarul `file`, aflăm că este executabil obținut prin linkare dinamică (*dynamically linked*), în vreme cel obținut în exemplul anterior este executabil obținut prin linkare statică (*statically linked).
 
 Investigăm simbolurile executabilului:
