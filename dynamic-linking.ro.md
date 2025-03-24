@@ -9,10 +9,10 @@ Rezolvarea acestor simboluri are loc mai târziu, prin folosirea unui **loader /
 Așadar, în cazul linkării dinamice, aspecte precum rezolvarea simbolurilor sau stabilirea adreselor nu sunt efectuate pentru simbolurile bibliotecilor.
 
 În directorul `06-dynamic/` avem un conținut similar directorului `05-static/`.
-Diferența este că acum, folosim linkare dinamică în loc de linkare statică pentru biblioteca ***standard C***.
+Diferența este că acum, folosim linkare dinamică în loc de linkare statică pentru biblioteca standard C.
 Pentru aceasta, am renunțat la argumentul `-static` folosit la linkare.
 
-Pentru acest exemplu, obținem un singur executabil `main`, din legarea statică cu biblioteca `libinc.a` și legarea dinamică cu biblioteca ***standard C***.
+Pentru acest exemplu, obținem un singur executabil `main`, din legarea statică cu biblioteca `libinc.a` și legarea dinamică cu biblioteca standard C.
 Similar exemplului din directorul `05-static/`, folosim comanda `make` pentru a obține executabilul `main`:
 
 ```sh
@@ -65,8 +65,8 @@ Investigăm simbolurile executabilului:
 ```
 
 Simbolurile obținute din modulul obiect `main.o` și din biblioteca statică `libinc.o` sunt rezolvate și au adrese stabilite.
-Observăm că folosirea bibliotecii ***standard C*** a dus la existența simbolului `_start`, care este entry pointul programului.
-Dar, simbolurile din biblioteca ***standard C***, (`printf`, `__libc_start_main`) sunt marcate ca nedefinite (`U`).
+Observăm că folosirea bibliotecii standard C a dus la existența simbolului `_start`, care este entry pointul programului.
+Dar, simbolurile din biblioteca standard C, (`printf`, `__libc_start_main`) sunt marcate ca nedefinite (`U`).
 Aceste simboluri nu sunt prezente în executabil: rezolvarea, stabilirea adreselor și relocarea lor se va realiza mai târziu, la încărcare (load time).
 
 La încărcare, o altă componentă software a sistemului, loaderul / linkerul dinamic, se va ocupa de:
@@ -84,7 +84,7 @@ Putem investiga bibliotecile dinamice folosite de un executabil prin intermediul
 	/lib/ld-linux.so.2 (0xf7f98000)
 ```
 
-În rezultatul de mai sus, observăm că executabilul folosește biblioteca ***standard C***, localizată la calea `/lib/i386-linux-gnu/libc.so.6`.
+În rezultatul de mai sus, observăm că executabilul folosește biblioteca standard C, localizată la calea `/lib/i386-linux-gnu/libc.so.6`.
 `/lib/ld-linux.so.2` este loaderul / linkerul dinamic.
 `linux-gate.so.1` e o componentă specifică Linux pe care nu vom insista.
 
@@ -92,7 +92,7 @@ Pe lângă dimensiunea redusă a executabilelor, marele avantaj al folosirii lin
 Când un executabil dinamic este încărcat, se identifică bibliotecile dinamice de care acesta depinde.
 Dacă o bibliotecă dinamică deja există în memorie, se face referire direct la zona existentă, partajând astfel biblioteca dinamică.
 Acest lucru conduce la o reducere semnificativă a memoriei ocupate de aplicațiile sistemului.
-10 aplicații care folosesc, probabil toate, biblioteca ***standard C***, vor partaja codul bibliotecii.
+10 aplicații care folosesc, probabil toate, biblioteca standard C, vor partaja codul bibliotecii.
 
 Din acest motiv, bibliotecile dinamice mai sunt numite și obiecte partajate (*shared objects*).
 De aici este, în Linux, extensia `.so` a fișierelor de tip bibliotecă partajată.
@@ -107,7 +107,7 @@ Diferă executabilul obținut, care va avea nedefinite simbolurile folosite din 
 De asemenea, loaderul / linkerul dinamic trebuie să fie informat de locul bibliotecii dinamice.
 
 În directorul `07-dynlib/` avem un conținut similar directorului `06-dynamic/`.
-Diferența este că acum, folosim linkare dinamică în loc de linkare statică și pentru a include funcționalitatea `inc.c`, nu doar pentru biblioteca ***standard C***.
+Diferența este că acum, folosim linkare dinamică în loc de linkare statică și pentru a include funcționalitatea `inc.c`, nu doar pentru biblioteca standard C.
 Pentru aceasta, construim fișierul bibliotecă partajată `libinc.so`, în locul fișierului bibliotecă statică `libinc.a`.
 
 Similar exemplului din directorul `06-dynamic/`, folosim comanda `make` pentru a obține executabilul `main`:
@@ -168,7 +168,7 @@ O eroare similară obținem dacă folosim utilitarul `ldd`:
 La fel, biblioteca `libinc.so` nu este găsită.
 
 Motivul este că nu am precizat loaderului unde să caute biblioteca partajată.
-Loaderul are definită calea unde să caute biblioteca ***standard C*** (`/lib/i386-linux-gnu/libc.so.6`), dar nu deține informații despre `libinc.so`.
+Loaderul are definită calea unde să caute biblioteca standard C (`/lib/i386-linux-gnu/libc.so.6`), dar nu deține informații despre `libinc.so`.
 
 Ca să precizăm loaderului calea către bibliotecă, o cale simplă, de test, este folosirea variabilei de mediu `LD_LIBRARY_PATH`, pe care o inițializăm la directorul curent (`.` - *dot*).
 Odată folosită variabila de mediu `LD_LIBRARY_PATH`, lansarea în execuție a executabilului va funcționa, la fel și folosirea `ldd`:
@@ -186,4 +186,4 @@ num_items: 1
 
 Variabila de mediu `LD_LIBRARY_PATH` pentru loader este echivalentul opțiunii `-L` în comanda de linkare: precizează directoarele în care să fie căutate biblioteci pentru a fi încărcate, respectiv linkate.
 Folosirea variabilei de mediu `LD_LIBRARY_PATH` este recomandată pentru teste.
-Pentru o folosire robustă, există alte mijloace de precizare a căilor de căutare a bibliotecilor partajate, documentate în [pagina de manual a loaderului / linkerului dinamic](https://man7.org/linux/man-pages/man8/ld.so.8.html#DESCRIPTION).
+Pentru o folosire robustă, există alte mijloace de precizare a căilor de căutare a bibliotecilor partajate, documentate în (pagina de manual a loaderului / linkerului dinamic)(https://man7.org/linux/man-pages/man8/ld.so.8.html#DESCRIPTION).
