@@ -180,7 +180,7 @@ Make sure you do the following:
    Use `helloworld` for the branch name:
 
    ```console
-   git checkoout -b helloworld
+   git checkout -b helloworld
    ```
 
    This will be the branch **from** where you will create a pull request.
