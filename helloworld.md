@@ -11,7 +11,7 @@ The table below summarizes the programs:
 | Language| Language (Spec) Site | Section | Build / Run Toolchain | Debian/Ubuntu Packages |
 |---------|----------------------|---------|-----------------------|------------------------|
 |     C   |                   [The Standard - C](https://www.iso-9899.info/wiki/The_Standard)   |     [C](#c)    |   GCC                    |          build-essential              |
-|    C++     |                [The Standard - C++](https://isocpp.org/std/the-standard)      |   [C++](#c++)      |      GCC / G++                 |         build-essential , g++               |
+|    C++     |                [The Standard - C++](https://isocpp.org/std/the-standard)      |   [C++](#c--)      |      GCC / G++                 |         build-essential , g++               |
 |   Rust      |               [Rust Programming Language](https://www.rust-lang.org/)       | [Rust](#rust)        | Rust(Crate)                      |              rustlang          |
 
 
@@ -40,7 +40,7 @@ Run with:
 # C++
 
 ```c++
-#include <iostream>
+#include <iostream>a
 int main()
 {
 std::cout << "Hello, World!" << std::endl;
