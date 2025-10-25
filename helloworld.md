@@ -2,8 +2,6 @@
 
 [![helloworld](https://github.com/rosedu/workshop-markdown/blob/solution/helloworld.png)](https://github.com/rosedu/workshop-markdown/blob/solution/helloworld.png)
 
-![helloworld](./helloworld.png)
-
 [![App Platorm](https://doimages.nyc3.cdn.digitaloceanspaces.com/002Blog/0-BLOG-BANNERS/app_platform.png)](https://www.digitalocean.com/products/app-platform)
 
 We list below Helloworld programs for different programming languages, i.e. programs that print "Hello, World!". The
