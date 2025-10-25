@@ -1,13 +1,13 @@
 # Pizza is cool :pizza:
 ## Iconic Pizza shops
--**Pizza Hut**
--**FNAF Pizzeria**
+-**Pizza Hut**    
+-**FNAF Pizzeria**   
 -**Trickshot**
 
 ## Most famous types of pizzas 
--Capriciosa
--Neapolitan
--Margherita
+-Capriciosa   
+-Neapolitan    
+-Margherita   
 -Supreme
 
 ## History of the creation of pizza
