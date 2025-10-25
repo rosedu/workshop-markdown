@@ -189,3 +189,4 @@ Folosirea variabilei de mediu `LD_LIBRARY_PATH` este recomandată pentru teste.
 Pentru o folosire robustă, există alte mijloace de precizare a căilor de căutare a bibliotecilor partajate, documentate în (pagina de manual a loaderului / linkerului dinamic)(https://man7.org/linux/man-pages/man8/ld.so.8.html#DESCRIPTION).
 
 AM fixat erorile :D
+sad
