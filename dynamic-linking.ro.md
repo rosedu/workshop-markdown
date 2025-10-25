@@ -1,5 +1,9 @@
 # Linkare dinamică
 
+
+**Notă adăugată:** Linkarea dinamică permite executabilelor să folosească biblioteci externe fără a le include complet în fișierul final, economisind spațiu și memorie.
+
+
 Linkarea dinamică înseamnă că în executabil nu sunt incluse componentele folosite din bibliotecă.
 Acestea vor fi incluse mai târziu, la încărcare (*load time*) sau chiar la rulare (*runtime).
 În urma linkării dinamice, executabilul reține referințe la bibliotecile folosite și la simbolurile folosite din cadrul acestora.
