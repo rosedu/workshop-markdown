@@ -182,7 +182,7 @@ Odată folosită variabila de mediu `LD_LIBRARY_PATH`, lansarea în execuție a 
 
 [..]/07-dynlib$ LD_LIBRARY_PATH=. ./main
 num_items: 1
-``
+```
 
 Variabila de mediu `LD_LIBRARY_PATH` pentru loader este echivalentul opțiunii `-L` în comanda de linkare: precizează directoarele în care să fie căutate biblioteci pentru a fi încărcate, respectiv linkate.
 Folosirea variabilei de mediu `LD_LIBRARY_PATH` este recomandată pentru teste.
