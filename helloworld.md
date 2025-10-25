@@ -108,3 +108,85 @@ Build with:
 Run with:
 
 `java HelloWorld`
+
+# x86_64 Assembly
+
+Build with:
+
+`TODO`
+
+Run with:
+
+`./helloworld`
+
+# ARM64 Assembly
+
+Build with:
+
+`TODO`
+
+Run with:
+
+`./helloworld`
+
+# Bahs
+
+```bash
+echo "Hello, world!"
+```
+
+Run with:
+
+`bash helloworld.sh`
+
+# Python
+
+```bash
+print("Hello, World!")
+```
+
+Run with:
+
+`python helloworld.py`
+
+# Ruby
+
+```ruby
+puts "Hello, World!"
+```
+
+Run with:
+
+`ruby helloworld.rb`
+
+# PHP
+
+```php
+<?php
+echo "Hello, World!"
+?>
+```
+
+Run with:
+
+`./helloworld`
+
+# Perl
+
+```perl
+print("Hello, World!\n")
+```
+
+Run with:
+
+`perl helloworld.pl`
+
+# Lua
+
+```lua
+print("Hello, World!")
+```
+
+Run with:
+
+`lua helloworld.lua`
