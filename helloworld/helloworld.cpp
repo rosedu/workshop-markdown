@@ -1,7 +1,7 @@
 #include <iostream>
-
+using namespace std;
 int main()
 {
-	std::cout << "Hello, World!, astazi am invatat multe despre pull requests" << std::endl;
+	cout << "Hello, World!, astazi am invatat multe despre pull requests,ma va ajuta in viitor" << std::endl;
 	return 0;
 }
