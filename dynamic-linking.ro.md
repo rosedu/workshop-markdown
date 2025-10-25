@@ -39,7 +39,7 @@ main: ELF 32-bit LSB executable, Intel 80386, version 1 (SYSV), dynamically link
 
 [..]/06-dynamic$ file ../05-static/main
 ../05-static/main: ELF 32-bit LSB executable, Intel 80386, version 1 (GNU/Linux), statically linked, for GNU/Linux 3.2.0, BuildID[sha1]=60adf8390374c898998c0b713a8b1ea0c255af38, not stripped
-``
+```
 
 Fișierul executabil `main` obținut prin linkare dinamică are un comportament identic fișierului executabil `main` obținut prin linkare statică.
 Observăm că dimensiunea sa este mult mai redusă: ocupă `7 KB` comparativ cu `600 KB` cât avea varianta sa statică.
