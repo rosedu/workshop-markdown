@@ -13,7 +13,7 @@ Diferența este că acum, folosim linkare dinamică în loc de linkare statică 
 Pentru aceasta, am renunțat la argumentul `-static` folosit la linkare.
 
 Pentru acest exemplu, obținem un singur executabil `main`, din legarea statică cu biblioteca `libinc.a` și legarea dinamică cu biblioteca standard C.
-Similar exemplului din directorul `05-static/, folosim comanda `make` pentru a obține executabilul `main`:
+Similar exemplului din directorul `05-static/`, folosim comanda `make` pentru a obține executabilul `main`:
 
 ```console
 [..]/06-dynamic$ ls
@@ -43,7 +43,7 @@ main: ELF 32-bit LSB executable, Intel 80386, version 1 (SYSV), dynamically link
 
 Fișierul executabil `main` obținut prin linkare dinamică are un comportament identic fișierului executabil `main` obținut prin linkare statică.
 Observăm că dimensiunea sa este mult mai redusă: ocupă `7 KB` comparativ cu `600 KB` cât avea varianta sa statică.
-De asemenea, folosind utilitarul `file`, aflăm că este executabil obținut prin linkare dinamică (*dynamically linked*), în vreme cel obținut în exemplul anterior este executabil obținut prin linkare statică (*statically linked).
+De asemenea, folosind utilitarul `file`, aflăm că este executabil obținut prin linkare dinamică (*dynamically linked*), în vreme ce cel obținut în exemplul anterior este executabil obținut prin linkare statică (*statically linked).
 
 Investigăm simbolurile executabilului:
 
@@ -53,14 +53,14 @@ Investigăm simbolurile executabilului:
 0804848c T increment
 0804847c T init
 [...]
-         U __libc_start_main@@GLIBC_2.0
+         U `__libc_start_main@@GLIBC_2.0`
 08048446 T main
 0804a020 b num_items
 080484a9 T print
-         U printf@@GLIBC_2.0
+         U `printf@@GLIBC_2.0`
 0804849f T read
 [...]
-08048330 T _start
+08048330 T `_start`
 [...]
 ```
 
@@ -73,11 +73,11 @@ La încărcare, o altă componentă software a sistemului, loaderul / linkerul d
 
 - localizarea în sistemul de fișiere a fișierelor bibliotecă dinamice care sunt folosite de fișierul executabil încărcat
 - încărcarea în memorie a acelor biblioteci dinamice, lucru care duce și la stabilirea adreselor simbolurilor din bibliotecă
-- parcurgerea simbolurilor nedefinite din cadrul fișierului executabil, localizarea lor în biblioteca înacarcată dinamic și relocarea lor în executabilul încărcat în memorie
+- parcurgerea simbolurilor nedefinite din cadrul fișierului executabil, localizarea lor în biblioteca încarcată dinamic și relocarea lor în executabilul încărcat în memorie
 
 Putem investiga bibliotecile dinamice folosite de un executabil prin intermediul utilitarului `ldd`:
 
-``console
+```console
 [..]/06-dynamic$ ldd main
 	linux-gate.so.1 (0xf7f97000)
 	libc.so.6 => /lib/i386-linux-gnu/libc.so.6 (0xf7d8a000)
@@ -102,13 +102,13 @@ De aici este, în Linux, extensia `.so` a fișierelor de tip bibliotecă partaja
 Numele corect al unei biblioteci dinamice este bibliotecă cu linkare dinamică (*dynamically linked library*) sau bibliotecă partajată.
 În Windows, bibliotecile dinamice sunt numite *dynamic-link libraries* de unde și extensia `.dll`.
 
-Din punctul de vedere al comenzii folosite, nu diferă linkarea unei biblioteci dinamice sau a unei biblioci statice.
+Din punctul de vedere al comenzii folosite, nu diferă linkarea unei biblioteci dinamice sau a unei biblioteci statice.
 Diferă executabilul obținut, care va avea nedefinite simbolurile folosite din bibliotecile dinamice.
 De asemenea, loaderul / linkerul dinamic trebuie să fie informat de locul bibliotecii dinamice.
 
 În directorul `07-dynlib/` avem un conținut similar directorului `06-dynamic/`.
 Diferența este că acum, folosim linkare dinamică în loc de linkare statică și pentru a include funcționalitatea `inc.c`, nu doar pentru biblioteca standard C.
-Pentru aceasta, construim fișierul bibliotecă partajată `libinc.so`, în locul fișierului bibliotecă statică `libibc.a`.
+Pentru aceasta, construim fișierul bibliotecă partajată `libinc.so`, în locul fișierului bibliotecă statică `libinc.a`.
 
 Similar exemplului din directorul `06-dynamic/`, folosim comanda `make` pentru a obține executabilul `main`:
 
@@ -186,4 +186,4 @@ num_items: 1
 
 Variabila de mediu `LD_LIBRARY_PATH` pentru loader este echivalentul opțiunii `-L` în comanda de linkare: precizează directoarele în care să fie căutate biblioteci pentru a fi încărcate, respectiv linkate.
 Folosirea variabilei de mediu `LD_LIBRARY_PATH` este recomandată pentru teste.
-Pentru o folosire robustă, există alte mijloace de precizare a căilor de căutare a bibliotecilor partajate, documentate în (pagina de manual a loaderului / linkerului dinamic)(https://man7.org/linux/man-pages/man8/ld.so.8.html#DESCRIPTION).
+Pentru o folosire robustă, există alte mijloace de precizare a căilor de căutare a bibliotecilor partajate, documentate în [pagina de manual a loaderului / linkerului dinamic](https://man7.org/linux/man-pages/man8/ld.so.8.html#DESCRIPTION).
