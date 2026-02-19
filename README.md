@@ -1,12 +1,13 @@
-# Markdown Workshop
+# Markdown and Makefile Workshop
 
-This is a practical workshop about the syntax and the use of the [Markdown format](https://www.markdownguide.org/basic-syntax/).
+This is a practical workshop about the syntax and the use of the [Markdown format](https://www.markdownguide.org/basic-syntax/) and of the [GNU make](https://www.gnu.org/software/make/manual/make.html) utility.
 In particular, we will focus on the [GitHub Flavored Markdown](https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax), used by GitHub.
 See the full specification of the GitHub Flavored Markdown [here](https://github.github.com/gfm/).
 
 > [!NOTE]
 > Markdown is not only used in GitHub / GitLab and other software development platforms, but also in chat message engines such as [Discord](https://discord.com/), note taking apps such as [HackMD](https://hackmd.io/) and wiki engines such as [MDwiki](https://mdwiki.info).
 > Parts of the Markdown syntax are also used on WhatsApp, MS Teams and other chat message engines, particularly for text formatting.
+> Makefiles are used to efficiently build and debug software in all types of projects, from message applications to hypervisors and operating system modules. What makes them so special is the ability to create a chain of command between different Makefiles, which has the wonderful effect of modularization.
 
 ## Set Up
 
@@ -300,6 +301,13 @@ Follow the steps:
 1. Create commits with the updates to the `README.md` file.
    Push commits to the GitHub remote repository.
    Now check your resulting profile page on your GitHub page.
+
+## Use of GNU make in public projects
+
+We will study different implementations of Makefiles across multiple projects to get a feel of its purpose and strengths.
+
+### This Repository
+
 
 ## Create a Website with GitHub and Markdown
 
