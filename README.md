@@ -1,7 +1,7 @@
 # Markdown and Makefile Workshop
 
 This is a practical workshop about the syntax and the use of the [Markdown format](https://www.markdownguide.org/basic-syntax/) and of the [GNU make](https://www.gnu.org/software/make/manual/make.html) utility.
-In particular, we will focus on the [GitHub Flavored Markdown](https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax), used by GitHub.
+The Markdown part of this workshop will focus on the [GitHub Flavored Markdown](https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax) version, used by GitHub.
 See the full specification of the GitHub Flavored Markdown [here](https://github.github.com/gfm/).
 
 > [!NOTE]
@@ -57,7 +57,7 @@ Identify syntax aspects in the documentation for [GitHub Flavored Markdown](http
 See:
 
 - The use of `#`, `##`, `###` for section headings.
-- The use of backticks for typewriter font, used for the names of files, functions, and 
+- The use of backticks for typewriter font, used for the names of files, functions, and
 - The use `-` and `\*` for unordered lists.
 - The use of `1.` for ordered lists.
 - The syntax used for links.
@@ -251,6 +251,234 @@ Check the GitHub web view of the [upstream repository](https://github.com/rosedu
 ### Clean Up After Pull Request
 
 After the pull request is merged, go to the same steps as above to clean your pull request.
+
+## What is GNU make?
+
+Make is a toolchain included in the GNU open-source software application collection that is used to set up and organise building, installing and cleaning procedures in a development repository.
+
+We will look at some examples from the open-source world.
+
+### This Repository
+
+Let's look at the file named `Makefile`:
+
+```console
+cat Makefile
+```
+
+Although it does not have any file extension, it is basically a text file. It may seem like a coincidence that the file we are using GNU make with is named Makefile, but this is actually a recommendation and a global standard between developers.
+
+If we look at this file more closely, we will see some syntax rules vital for a Makefile:
+
+ - There are multiple rules that contain multiple lines indented with a tab, which are part of a so-called *recipe*
+ - Each rule starts with a name or a file, we will from now on call it a *target*
+ - After the colons there are one or more files, which are known as *prerequisites*
+ - At the beginning (but not exclusively) there are a couple of *variables*
+
+To see the effects of this file, run:
+
+```console
+make demo
+```
+
+### Operating Systems (from Open Education Hub)
+
+Read the Makefile in the [Operating Systems (Open Education Hub / `cs-pub-ro`) repository](https://github.com/cs-pub-ro/operating-systems). There are a couple of rules that build on top of each other, we will go over this concept later on.
+
+### KraftKit (from Unikraft)
+
+Read the Makefile in the [KraftKit repository](https://github.com/unikraft/kraftkit/tree/staging). This file contains advanced syntax, so you should focus on variable definitions, the use of `.PHONY` and conditional blocks.
+
+## Building a Makefile
+
+In order to properly grasp how one writes a Makefile, we will discuss each step individually. First, let's write our first rule!
+
+### Rules and recipes
+
+The main part of a Makefile are its rules and the recipes associated to each rule. They abide by the following format:
+
+```console
+<target1> <target2> ... : <prereq1> <prereq2> ...
+	<recipe_command1>
+	<recipe_command2>
+	...
+```
+> [!NOTE]
+> All recipe commands must be indented using tab! This is how Make knows a text line belongs to a specific recipe.
+> Equally important is that a rule may contain more than one target or more than one prerequisite (even zero prerequisites!), depending on the build flow of the application.
+
+We will start by writing our first build rule. In order to do that, go to the `gnumake` folder. You will find there an empty Makefile waiting for you.
+
+You will also find some source files containing code written in C. Those will be our *prerequisites* for the length of this demo, given that we are building our application from them. We will build `example.c`.
+
+Based on what we know, in order to obtain our binary, we must begin with `example`, as this is our target, our end goal. To build it, we need `example.c` and a C compiler (i.e. `gcc`) to run `gcc -o example example.c`. Now we can build our rule:
+
+```make
+example: example.c
+	gcc -o example example.c
+```
+
+In order to run any rule from a Makefile, the usual command is:
+
+```console
+make <rule_target>
+```
+
+If a rule has more than one target, you can choose any target to run the same recipe. Run `make example` and execute the freshly-made application. Congratulations, you wrote your first Make rule!
+
+### Cleanup using Make
+
+There are moments when one may want to delete the products of a build process, which is widely known as *cleaning* our repository. This is usually done to eliminate parasite effects of old binaries or to clear up the structure of the working directory.
+
+Make proposes a standard rule named `clean`, which is responsible for eliminating all byproducts of our source files. There is a catch however; what could be the target of such rule? The answer is: none. It does not have any prerequisites either.
+
+#### .PHONY
+
+Some targets are not representing any files in our working directory, they are just names, tags for our recipes. Rules that have such targets are categorised as *phony* because they can be misleading for Make. For example, let's say we have this rule:
+
+```make
+clean:
+	rm example
+```
+
+Write it in the Makefile and see if it does anything.
+
+Why does Make stop execution of this rule? Well, there is a file in our working directory named `clean` and our rule does not have any prerequisites. That means, there isn't anything that can change the file named `clean`, so Make will waste time by trying to build our target again and stops. This is the default behaviour of the toolchain.
+
+How do we fix it? We tell Make that the target of this rule is merely a name, not an actual file. That way, Make will ignore the file and run the rule every time we request it. This is how it should look:
+
+```make
+.PHONY: clean
+
+clean:
+	rm example
+```
+
+There can be multiple rules labeled as phony in a single statement; they are just mentioned and separed with a single space.
+
+This should be the final result:
+
+```make
+example: example.c
+	gcc -o example example.c
+
+.PHONY: clean
+
+clean:
+	rm example
+```
+
+**Well done, you just built your first Makefile!**
+
+## Bits and pieces of Makefiles
+
+Makefiles are written using the following structures:
+
+- **Explicit Rules:** targets and prerequisites are mentioned and a recipe is clearly laid out;
+
+- **Implicit Rules:** they apply to classes of files and describe a target's dependency of a similarly-named source file;
+
+- **Variables:** it associates a tag / name to a string of text;
+
+- **Directives:** special instructions to be carried out by Make as it reads the Makefile, for example reading another Makefile, or ignoring specific parts of a Makefile based on the value of evaluated variables;
+
+- **Comments:** starting with `#`, can be continued on the next line if we add at the end of the line `\`; backslash can also be used to break up long commands in order to improve readability;
+
+The first rule written in the Makefile is the default rule that runs when we use `make`. When running a rule, if there is a prerequisite that is the target of another rule it will run that before. Think of it as a depth-first search on graphs, where the nodes are the rules and the vertices are the dependencies on one another!
+
+Using these components, engineers can build massive projects without wrapping their head with compiler commands and dependencies. Without further ado, let's get into using these!
+
+### Variables
+
+Variables are useful in multiple scenarios. Let's say that someone wants to change the compiler that is being used inside the Makefile. Changing hundreds of lines of recipes is gruesome, so instead we use a variable that contains the compiler's name to allow easier update and refinement of various instructions. Here is an example:
+
+```make
+example_variable = src1.c src2.c
+# when expanded with $(example_variable)
+# it will be replaced by "src1.c src2.c"
+
+CC = gcc
+
+example: example.c
+	$(CC) -o example example.c
+	# Make is therefore running
+	# "gcc -o example example.c"
+```
+
+Variables can also be used to reference targets and prerequisites in an easier manner.
+
+### Wildcards and automatic variables
+
+Wildcards are characters that expand automatically to predefined values. They have the same meaning as the ones in Bash. The usual suspects are `*`, `~` and `?`. We will describe them below:
+
+ - `*` is a placeholder for zero or more characters;
+
+ - `~` is a placeholder for the home directory of the current user;
+
+ - `?` is a placeholder for exactly one character.
+
+Automatic variables are pairs of characters that start with `$`. Their values vary depending on the executed rule and other factors:
+
+ - `$^` is replaced with all prerequisites of a rule automatically at recipe execution;
+
+ - `$@` is replaced with the targets of the rule automatically at execution, even if the rule is declared as .PHONY. It basically replaces character by character this sequence with the targets sequence.
+
+ - `$<` is replaced with the first prerequisite automatically.
+
+Let's see an example to clear things up! In the folder with the Makefile given below, there are two files, namely `example1.c` and `example2.c`.
+
+```make
+example: *.c
+	gcc -o $@ $^
+
+.PHONY: clean distclean
+
+clean:
+	rm example
+
+# this deletes even the source files
+# given that this is an example, it is a niche case
+# in real world applications, this would never be a rule!!!
+
+distclean: clean
+	rm example?.c
+
+# also, the dependency on clean means that distclean runs it before running its own recipe!
+```
+
+## Good Makefile Practices
+
+There are several recommendations regarding the naming of Makefile rules and how they should behave. Not only that, but Makefiles should usually bear a name that will be automatically recognised by Make.
+
+### Makefile naming convention
+
+Based on how Make is implemented in the GNU library, in order to run a `make` command without explicitly specifying the Makefile's location one should name it:
+
+- "GNUmakefile"
+- "makefile"
+- "Makefile"
+
+The first is rarely met and developers usually opt for the last 2 options. This is the order in which Make looks for Makefiles in the current working directory. When it finds a Makefile with one of these names, it stops searching and starts executing recipes.
+
+> [!NOTE]
+> Makefiles do not bear any file extension!
+
+> [!NOTE]
+> We do not recommend naming Makefiles in any other way except those recognised automatically by Make. It can represent a serious obstacle for developers that do not know the actual name of the project's Makefile.
+
+### Multi-thread execution
+
+Make supports executing multiple recipes simulatenously. This is achieved using the `-j <thread_count>` option and it is usually the norm to insert the number of logical processors / threads your machine has. On Linux / macOS, this usually is `-j $(nproc)`.
+
+If no thread limit is given, Make will create as many threads as it needs, usually leading to getting your Operating System stuck with too many threads.
+
+### Multi-file structure
+
+Make supports fragmenting rules into multiple Makefiles, creating something similar to an arborescent structure containing primary and secondary Makefiles. This is achieved by using:
+
+`include <filename1> <filename2> ...`
+
+Make will read these Makefiles first before starting to execute any rule requested by the user.
 
 ## GitHub Profile Page
 
