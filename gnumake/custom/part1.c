@@ -1,30 +1,30 @@
-#include <stdio.h>
-#include <string.h>
-#include <stdlib.h>
 #include "header.h"
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
 
 int main(void) {
-	char *mesg = calloc(101, sizeof(char));
-	if (mesg == NULL) {
-		goto error;
-	}
+  char *mesg = calloc(101, sizeof(char));
+  if (mesg == NULL) {
+    goto error;
+  }
 
-	printf("Send a \"ping\" to get a pong;\n");
-	printf("Or send something else and you get wrong!\n");
-	fgets(mesg, 101, stdin);
+  printf("Send a \"ping\" to get a pong;\n");
+  printf("Or send something else and you get wrong!\n");
+  fgets(mesg, 101, stdin);
 
-	char *answer = reply(mesg);
-	if (answer == NULL) {
-		goto error;
-	}
+  char *answer = reply(mesg);
+  if (answer == NULL) {
+    goto error;
+  }
 
-	printf("%s\n", answer);
+  printf("%s\n", answer);
 
-	free(mesg);
-	free(answer);
-	return 0;
+  free(mesg);
+  free(answer);
+  return 0;
 
 error:
-	printf("calloc() failed; exiting...\n");
-	return -1;
+  printf("calloc() failed; exiting...\n");
+  return -1;
 }
