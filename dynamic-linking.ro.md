@@ -14,7 +14,6 @@ Pentru aceasta, am renunțat la argumentul `-static` folosit la linkare.
 
 Pentru acest exemplu, obținem un singur executabil `main`, din legarea statică cu biblioteca `libinc.a` și legarea dinamică cu biblioteca standard C.
 Similar exemplului din directorul `05-static/, folosim comanda `make` pentru a obține executabilul `main`:
-
 ```console
 [..]/06-dynamic$ ls
 inc.c  inc.h  main.c  Makefile
@@ -39,14 +38,13 @@ main: ELF 32-bit LSB executable, Intel 80386, version 1 (SYSV), dynamically link
 
 [..]/06-dynamic$ file ../05-static/main
 ../05-static/main: ELF 32-bit LSB executable, Intel 80386, version 1 (GNU/Linux), statically linked, for GNU/Linux 3.2.0, BuildID[sha1]=60adf8390374c898998c0b713a8b1ea0c255af38, not stripped
-``
+```
 
 Fișierul executabil `main` obținut prin linkare dinamică are un comportament identic fișierului executabil `main` obținut prin linkare statică.
 Observăm că dimensiunea sa este mult mai redusă: ocupă `7 KB` comparativ cu `600 KB` cât avea varianta sa statică.
 De asemenea, folosind utilitarul `file`, aflăm că este executabil obținut prin linkare dinamică (*dynamically linked*), în vreme cel obținut în exemplul anterior este executabil obținut prin linkare statică (*statically linked).
 
 Investigăm simbolurile executabilului:
-
 ```console
 [..]/06-dynamic$ nm main
 [...]
@@ -76,8 +74,7 @@ La încărcare, o altă componentă software a sistemului, loaderul / linkerul d
 - parcurgerea simbolurilor nedefinite din cadrul fișierului executabil, localizarea lor în biblioteca înacarcată dinamic și relocarea lor în executabilul încărcat în memorie
 
 Putem investiga bibliotecile dinamice folosite de un executabil prin intermediul utilitarului `ldd`:
-
-``console
+```console
 [..]/06-dynamic$ ldd main
 	linux-gate.so.1 (0xf7f97000)
 	libc.so.6 => /lib/i386-linux-gnu/libc.so.6 (0xf7d8a000)
@@ -111,7 +108,6 @@ Diferența este că acum, folosim linkare dinamică în loc de linkare statică 
 Pentru aceasta, construim fișierul bibliotecă partajată `libinc.so`, în locul fișierului bibliotecă statică `libibc.a`.
 
 Similar exemplului din directorul `06-dynamic/`, folosim comanda `make` pentru a obține executabilul `main`:
-
 ```console
 [..]/07-dynlib$ ls
 inc.c  inc.h  main.c  Makefile
@@ -146,7 +142,6 @@ Executabilul obținut are dimensiunea în jur de `7 KB` puțin mai mică decât 
 Diferența cea mai mare este că, acum, simbolurile din biblioteca `libinc.so` (`increment`, `init`, `print`, `read`) sunt nerezolvate.
 
 Dacă încercăm lansarea în execuție a executabilului, observăm că primim o eroare:
-
 ```console
 [..]/07-dynlib$ ./main
 ./main: error while loading shared libraries: libinc.so: cannot open shared object file: No such file or directory
@@ -156,7 +151,6 @@ Eroarea spune că nu poate localiza biblioteca `libinc.so` la încărcare (*load
 Este deci, o eroare de loader.
 
 O eroare similară obținem dacă folosim utilitarul `ldd`:
-
 ```console
 [..]/07-dynlib$ ldd ./main
 	linux-gate.so.1 (0xf7f9f000)
@@ -172,7 +166,6 @@ Loaderul are definită calea unde să caute biblioteca standard C (`/lib/i386-li
 
 Ca să precizăm loaderului calea către bibliotecă, o cale simplă, de test, este folosirea variabilei de mediu `LD_LIBRARY_PATH`, pe care o inițializăm la directorul curent (`.` - *dot*).
 Odată folosită variabila de mediu `LD_LIBRARY_PATH`, lansarea în execuție a executabilului va funcționa, la fel și folosirea `ldd`:
-
 ```console
 [..]/07-dynlib$ LD_LIBRARY_PATH=. ldd ./main
 	linux-gate.so.1 (0xf7eda000)
@@ -186,4 +179,4 @@ num_items: 1
 
 Variabila de mediu `LD_LIBRARY_PATH` pentru loader este echivalentul opțiunii `-L` în comanda de linkare: precizează directoarele în care să fie căutate biblioteci pentru a fi încărcate, respectiv linkate.
 Folosirea variabilei de mediu `LD_LIBRARY_PATH` este recomandată pentru teste.
-Pentru o folosire robustă, există alte mijloace de precizare a căilor de căutare a bibliotecilor partajate, documentate în (pagina de manual a loaderului / linkerului dinamic)(https://man7.org/linux/man-pages/man8/ld.so.8.html#DESCRIPTION).
+Pentru o folosire robustă, există alte mijloace de precizare a căilor de căutare a bibliotecilor partajate, documentate în [pagina de manual a loaderului / linkerului dinamic](https://man7.org/linux/man-pages/man8/ld.so.8.html#DESCRIPTION).
