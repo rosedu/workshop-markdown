@@ -11,7 +11,7 @@ Diferența este că acum, folosim linkare dinamică în loc de linkare statică 
 Pentru aceasta, am renunțat la argumentul `-static` folosit la linkare.
 Pentru acest exemplu, obținem un singur executabil `main`, din legarea statică cu biblioteca `libinc.a` și legarea dinamică cu biblioteca standard C.
 Similar exemplului din directorul `05-static/, folosim comanda `make` pentru a obține executabilul `main`:
-```console
+```console 
 [..]/06-dynamic$ ls
 inc.c  inc.h  main.c  Makefile
 
