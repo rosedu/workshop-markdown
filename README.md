@@ -29,7 +29,7 @@ To set up the workshop environment, follow the steps:
 
 1. Add the `upstream` remote to point to the [upstream repository](https://github.com/rosedu/workshop-markdown):
 
-   ```console
+   ```bash
    git remote add upstream https://github.com/rosedu/workshop-markdown
    git fetch upstream
    ```
