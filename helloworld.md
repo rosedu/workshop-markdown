@@ -22,111 +22,187 @@ specified compiler or interpreter is required for each programming languages.
 | Perl | The Perl Programming Language | Perl | perl |
 | Lua | The Lua Programming Language | Lua | Lua | lua |
 
-# C
-```c`
+
+## C
+```c
 #include <stdio.h>
+
 int main(void)
 {
-	puts("Hello, World!");
-	return 0;
+        puts("Hello, World!");
+        return 0;
 }
 ```
 Build with:
-`gcc -Wall -o helloworld helloworld.c`
+```console
+gcc -Wall -o helloworld helloworld.c
+```
 Run with:
-`./helloworld`
+```console
+./helloworld
+```
 
-# C++
+## C++
 ```cpp
 #include <iostream>
+
 int main()
 {
-	std::cout << "Hello, World!" << std::endl;
-	return 0;
+        std::cout << "Hello, World!" << std::endl;
+        return 0;
 }
 ```
 Build with:
-`g++ -Wall -o helloworld helloworld.cpp`
+```console
+g++ -Wall -o helloworld helloworld.cpp
+```
 Run with:
-``./helloworld`
-# Dlang
+```console
+./helloworld
+```
+
+## Dlang
 ```dlang
 import std.stdio;
+
 void main()
 {
-writeln("Hello, World!");
+    writeln("Hello, World!");
 }
 ```
 Build with:
-`gdc -Wall -o helloworld helloworld.cpp`
+```console
+gdc -Wall -o helloworld helloworld.cpp
+```
 Run with:
-``./helloworld`
-# Go
+```console
+./helloworld
+```
+
+## Go
 ```go
 package main
+
 import "fmt"
+
 func main() {
-fmt.Println("Hello, World!")
+    fmt.Println("Hello, World!")
 }
 ```
 Build and run with:
-`go run helloworld.go`
-# Rust
+```console
+go run helloworld.go
+```
+
+## Rust
 ```rs
 fn main() {
-println!("Hello, World");
+    println!("Hello, World");
 }
 ```
 Build with:
-`rustc hello.rs`
+```console
+rustc hello.rs
+```
 Run with:
-`./helloworld`
-Java
+```console
+./helloworld
+```
+
+## Java
 ```java
 public class HelloWorld {
-public static void main(String[] args) {
-System.out.println("Hello, World!");
-}
+    public static void main(String[] args) {
+        System.out.println("Hello, World!");
+    }
 }
 ```
 Build with:
-`javac HelloWorld.java`
+```console
+javac HelloWorld.java
+```
 Run with:
-`java HelloWorld`
-# x86_64 Assembly
+```console
+java HelloWorld
+```
+
+## x86_64 Assembly
+```as
+```
 Build with:
-`TODO`
-Run with:
-`./helloworld``
+```console
 TODO
-# ARM64 Assembly
-Build with:
-TODO
+```
 Run with:
+```console
 ./helloworld
-Bash
+```
+TODO
+
+## ARM64 Assembly
+```as
+```
+Build with:
+```console
+TODO
+```
+Run with:
+```console
+./helloworld
+```
+
+## Bash
+```bash
 echo "Hello, World!"
+```
 Run with:
+```console
 bash helloworld.sh
-Python
+```
+
+## Python
+```py
 print("Hello, World!")
+```
 Run with:
+```console
 python helloworld.py
-Ruby
+```
+
+## Ruby
+```rb
 puts "Hello, World!"
+```
 Run with:
+```console
 ruby helloworld.rb
-PHP
+```
+
+## PHP
+```php
 <?php
 echo "Hello, World!"
 ?>
+```
 Run with:
+```console
 ./helloworld
-Perl
+```
+
+## Perl
+```pl
 print("Hello, World!\n")
+```
 Run with:
+```console
 perl helloworld.pl
-Lua
+```
+
+## Lua
+```lua
 print("Hello, World!")
+```
 Run with:
+```console
 lua helloworld.lua
+```
