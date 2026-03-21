@@ -15,7 +15,7 @@ Pentru aceasta, am renunțat la argumentul `-static` folosit la linkare.
 Pentru acest exemplu, obținem un singur executabil `main`, din legarea statică cu biblioteca `libinc.a` și legarea dinamică cu biblioteca standard C.
 Similar exemplului din directorul `05-static/`, folosim comanda `make` pentru a obține executabilul `main`:
 
-```bash
+```console
 [..]/06-dynamic$ ls
 inc.c  inc.h  main.c  Makefile
 
@@ -47,7 +47,7 @@ De asemenea, folosind utilitarul `file`, aflăm că este executabil obținut pri
 
 Investigăm simbolurile executabilului:
 
-```bash
+```console
 [..]/06-dynamic$ nm main
 [...]
 0804848c T increment
@@ -77,7 +77,7 @@ La încărcare, o altă componentă software a sistemului, loaderul / linkerul d
 
 Putem investiga bibliotecile dinamice folosite de un executabil prin intermediul utilitarului `ldd`:
 
-```bash
+```console
 [..]/06-dynamic$ ldd main
 	linux-gate.so.1 (0xf7f97000)
 	libc.so.6 => /lib/i386-linux-gnu/libc.so.6 (0xf7d8a000)
@@ -112,7 +112,7 @@ Pentru aceasta, construim fișierul bibliotecă partajată `libinc.so`, în locu
 
 Similar exemplului din directorul `06-dynamic/`, folosim comanda `make` pentru a obține executabilul `main`:
 
-```bash
+```console
 [..]/07-dynlib$ ls
 inc.c  inc.h  main.c  Makefile
 
@@ -147,7 +147,7 @@ Diferența cea mai mare este că, acum, simbolurile din biblioteca `libinc.so` (
 
 Dacă încercăm lansarea în execuție a executabilului, observăm că primim o eroare:
 
-```bash
+```console
 [..]/07-dynlib$ ./main
 ./main: error while loading shared libraries: libinc.so: cannot open shared object file: No such file or directory
 ```
@@ -157,7 +157,7 @@ Este deci, o eroare de loader.
 
 O eroare similară obținem dacă folosim utilitarul `ldd`:
 
-```bash
+```console
 [..]/07-dynlib$ ldd ./main
 	linux-gate.so.1 (0xf7f9f000)
 	libinc.so => not found
@@ -173,7 +173,7 @@ Loaderul are definită calea unde să caute biblioteca standard C (`/lib/i386-li
 Ca să precizăm loaderului calea către bibliotecă, o cale simplă, de test, este folosirea variabilei de mediu `LD_LIBRARY_PATH`, pe care o inițializăm la directorul curent (`.` - *dot*).
 Odată folosită variabila de mediu `LD_LIBRARY_PATH`, lansarea în execuție a executabilului va funcționa, la fel și folosirea `ldd`:
 
-```bash
+```console
 [..]/07-dynlib$ LD_LIBRARY_PATH=. ldd ./main
 	linux-gate.so.1 (0xf7eda000)
 	libinc.so => ./libinc.so (0xf7ed2000)
