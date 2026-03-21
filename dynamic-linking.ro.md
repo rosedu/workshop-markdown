@@ -65,7 +65,7 @@ Investigăm simbolurile executabilului:
 ```
 
 Simbolurile obținute din modulul obiect `main.o` și din biblioteca statică `libinc.o` sunt rezolvate și au adrese stabilite.
-Observăm că folosirea bibliotecii standard C a dus la existența simboblului `_start`, care este entry pointul programului.
+Observăm că folosirea bibliotecii standard C a dus la existența simbolului `_start`, care este entry pointul programului.
 Dar, simbolurile din biblioteca standard C, (`printf`, __libc_start_main`) sunt marcate ca nedefinite (`U`).
 Aceste simboluri nu sunt prezente în executabil: rezolvarea, stabilirea adreselor și relocarea lor se va realiza mai târziu, la încărcare (load time).
 
@@ -73,7 +73,7 @@ La încărcare, o altă componentă software a sistemului, loaderul / linkerul d
 
 - localizarea în sistemul de fișiere a fișierelor bibliotecă dinamice care sunt folosite de fișierul executabil încărcat
 - încărcarea în memorie a acelor biblioteci dinamice, lucru care duce și la stabilirea adreselor simbolurilor din bibliotecă
-- parcurgerea simbolurilor nedefinite din cadrul fișierului executabil, localizarea lor în biblioteca înacarcată dinamic și relocarea lor în executabilul încărcat în memorie
+- parcurgerea simbolurilor nedefinite din cadrul fișierului executabil, localizarea lor în biblioteca încărcată dinamic și relocarea lor în executabilul încărcat în memorie
 
 Putem investiga bibliotecile dinamice folosite de un executabil prin intermediul utilitarului `ldd`:
 
@@ -102,13 +102,13 @@ De aici este, în Linux, extensia `.so` a fișierelor de tip bibliotecă partaja
 Numele corect al unei biblioteci dinamice este bibliotecă cu linkare dinamică (*dynamically linked library*) sau bibliotecă partajată.
 În Windows, bibliotecile dinamice sunt numite *dynamic-link libraries* de unde și extensia `.dll`.
 
-Din punctul de vedere al comenzii folosite, nu diferă linkarea unei biblioteci dinamice sau a unei biblioci statice.
+Din punctul de vedere al comenzii folosite, nu diferă linkarea unei biblioteci dinamice sau a unei biblioteci statice.
 Diferă executabilul obținut, care va avea nedefinite simbolurile folosite din bibliotecile dinamice.
 De asemenea, loaderul / linkerul dinamic trebuie să fie informat de locul bibliotecii dinamice.
 
 În directorul `07-dynlib/` avem un conținut similar directorului `06-dynamic/`.
 Diferența este că acum, folosim linkare dinamică în loc de linkare statică și pentru a include funcționalitatea `inc.c`, nu doar pentru biblioteca standard C.
-Pentru aceasta, construim fișierul bibliotecă partajată `libinc.so`, în locul fișierului bibliotecă statică `libibc.a`.
+Pentru aceasta, construim fișierul bibliotecă partajată `libinc.so`, în locul fișierului bibliotecă statică `libinc.a`.
 
 Similar exemplului din directorul `06-dynamic/`, folosim comanda `make` pentru a obține executabilul `main`:
 
