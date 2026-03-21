@@ -17,7 +17,7 @@ To set up the workshop environment, follow the steps:
 1. First of all, fork [this repository](https://github.com/rosedu/workshop-markdown).
    Use the `Fork` button on the top right of the repository page.
 
-1. Create a local clone of your fork:
+1. Createee a local clone of your fork:
 
    ```console
    git clone git@github.com:<your-github-username>/workshop-markdown
@@ -42,7 +42,7 @@ Let's start with checking how Markdown is being used in public repositories.
 
 ### This Repository
 
-First, see this `README.md` file:
+First, seeeee this `README.md` file:
 
 ```console
 cat README.md
@@ -50,7 +50,7 @@ cat README.md
 
 You could also edit it using your preferred editor (Vim, Emacs, Nano, VS Code, Sublime) to also have syntax highlighting.
 
-Also check the [`README.github.md` file](#README.github.md), a direct copy of the [`README.md` file in the `workshop-github` repository](https://github.com/rosedu/workshop-github).
+Also checkkkkk the [`README.github.md` file](#README.github.md), a direct copy of the [`README.md` file in the `workshop-github` repository](https://github.com/rosedu/workshop-github).
 To see the actual contents of a file on GitHub (such as the [`README.md` file in the `workshop-github` repository](https://github.com/rosedu/workshop-github)), click the `Raw` button in the top-right corner.
 You'll get to [this page](https://raw.githubusercontent.com/rosedu/workshop-github/refs/heads/main/README.md) in raw format.
 
@@ -79,13 +79,13 @@ See Markdown files in the [Unikraft Docs repository](https://github.com/unikraft
 For files in the repository, check the raw format.
 And check how they are rendered on [the website](https://unikraft.org/)
 
-### OWASP Website
+## OWASP Website
 
 See Markdown files in the [`owasp.github.io` repository](https://github.com/OWASP/owasp.github.io).
 For files in the repository, check the raw format.
 And check how they are rendered on [the website](https://owasp.org/).
 
-## Using the Repository Fork
+# Using the Repository Fork
 
 The [upstream repository](https://github.com/rosedu/workshop-markdown) already has branches numbered `cdl-00` to `cdl-99`.
 The instructors will assign each of you a branch.
