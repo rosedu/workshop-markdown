@@ -1,7 +1,7 @@
 # Linkare dinamică
 
 Linkarea dinamică înseamnă că în executabil nu sunt incluse componentele folosite din bibliotecă.
-Acestea vor fi incluse mai târziu, la încărcare (*load time*) sau chiar la rulare (*runtime).
+Acestea vor fi incluse mai târziu, la încărcare (*load time*) sau chiar la rulare (*runtime*).
 În urma linkării dinamice, executabilul reține referințe la bibliotecile folosite și la simbolurile folosite din cadrul acestora.
 Aceste referințe sunt similare unor simboluri nedefinite.
 Rezolvarea acestor simboluri are loc mai târziu, prin folosirea unui loader / linker dinamic.
@@ -9,10 +9,10 @@ Rezolvarea acestor simboluri are loc mai târziu, prin folosirea unui loader / l
 Așadar, în cazul linkării dinamice, aspecte precum rezolvarea simbolurilor sau stabilirea adreselor nu sunt efectuate pentru simbolurile bibliotecilor.
 
 În directorul `06-dynamic/` avem un conținut similar directorului `05-static/`.
-Diferența este că acum, folosim linkare dinamică în loc de linkare statică pentru biblioteca standard C.
-Pentru aceasta, am renunțat la argumentul `-static` folosit la linkare.
+Diferența este că acum folosim linkare dinamică în loc de linkare statică pentru biblioteca standard C.
+Pentru aceasta am renunțat la argumentul `-static` folosit la linkare.
 
-Pentru acest exemplu, obținem un singur executabil `main`, din legarea statică cu biblioteca `libinc.a` și legarea dinamică cu biblioteca standard C.
+Pentru acest exemplu obținem un singur executabil `main` din legarea statică cu biblioteca `libinc.a` și legarea dinamică cu biblioteca standard C.
 Similar exemplului din directorul `05-static/, folosim comanda `make` pentru a obține executabilul `main`:
 
 ```console
@@ -66,7 +66,7 @@ Investigăm simbolurile executabilului:
 
 Simbolurile obținute din modulul obiect `main.o` și din biblioteca statică `libinc.o` sunt rezolvate și au adrese stabilite.
 Observăm că folosirea bibliotecii standard C a dus la existența simboblului `_start`, care este entry pointul programului.
-Dar, simbolurile din biblioteca standard C, (`printf`, __libc_start_main`) sunt marcate ca nedefinite (`U`).
+Dar, simbolurile din biblioteca standard C, (`printf`, `__libc_start_main`) sunt marcate ca nedefinite (`U`).
 Aceste simboluri nu sunt prezente în executabil: rezolvarea, stabilirea adreselor și relocarea lor se va realiza mai târziu, la încărcare (load time).
 
 La încărcare, o altă componentă software a sistemului, loaderul / linkerul dinamic, se va ocupa de:
@@ -77,7 +77,7 @@ La încărcare, o altă componentă software a sistemului, loaderul / linkerul d
 
 Putem investiga bibliotecile dinamice folosite de un executabil prin intermediul utilitarului `ldd`:
 
-``console
+```console
 [..]/06-dynamic$ ldd main
 	linux-gate.so.1 (0xf7f97000)
 	libc.so.6 => /lib/i386-linux-gnu/libc.so.6 (0xf7d8a000)
@@ -88,7 +88,7 @@ Putem investiga bibliotecile dinamice folosite de un executabil prin intermediul
 `/lib/ld-linux.so.2` este loaderul / linkerul dinamic.
 `linux-gate.so.1` e o componentă specifică Linux pe care nu vom insista.
 
-Pe lângă dimensiunea redusă a executabilelor, marele avantaj al folosirii linkării dinamice, este că se pot partaja secțiunile de cod (nu de date) ale bibliotecilor dinamice.
+Pe lângă dimensiunea redusă a executabilelor, marele avantaj al folosirii linkării dinamice este că se pot partaja secțiunile de cod (nu de date) ale bibliotecilor dinamice.
 Când un executabil dinamic este încărcat, se identifică bibliotecile dinamice de care acesta depinde.
 Dacă o bibliotecă dinamică deja există în memorie, se face referire direct la zona existentă, partajând astfel biblioteca dinamică.
 Acest lucru conduce la o reducere semnificativă a memoriei ocupate de aplicațiile sistemului.
@@ -186,4 +186,4 @@ num_items: 1
 
 Variabila de mediu `LD_LIBRARY_PATH` pentru loader este echivalentul opțiunii `-L` în comanda de linkare: precizează directoarele în care să fie căutate biblioteci pentru a fi încărcate, respectiv linkate.
 Folosirea variabilei de mediu `LD_LIBRARY_PATH` este recomandată pentru teste.
-Pentru o folosire robustă, există alte mijloace de precizare a căilor de căutare a bibliotecilor partajate, documentate în (pagina de manual a loaderului / linkerului dinamic)(https://man7.org/linux/man-pages/man8/ld.so.8.html#DESCRIPTION).
+Pentru o folosire robustă, există alte mijloace de precizare a căilor de căutare a bibliotecilor partajate, documentate în [pagina de manual a loaderului / linkerului dinamic](https://man7.org/linux/man-pages/man8/ld.so.8.html#DESCRIPTION).
