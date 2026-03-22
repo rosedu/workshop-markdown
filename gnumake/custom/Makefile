@@ -16,7 +16,7 @@ greeting: greeting.c
 
 # Builds executable from multiple .c files and a .h header
 twoparter: part1.c part2.c header.h
-	$(CC) -o $@ $^
+	$(CC) $(CFLAGS) $(LDFLAGS) -o $@ $^
 
 # Removes executables if they exist
 clean:
