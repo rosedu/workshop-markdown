@@ -11,7 +11,7 @@ Well here it is:
 ## Here are my top 3 favorite pizza types
 
 1. **Diavola** (I love me some spicy food)
-1. **Quatro Formaggi** (Feels light to eat but still very filling)
+1. **Quattro Formaggi** (Feels light to eat but still very filling)
 1. **Hawaian** (Please don't kill me for liking pineapple :pleading_face:)
 
 ## You like pizza too? Of course you do
