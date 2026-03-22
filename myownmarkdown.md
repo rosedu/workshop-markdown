@@ -12,7 +12,7 @@ Well here it is:
 
 1. **Diavola** (I love me some spicy food)
 1. **Quattro Formaggi** (Feels light to eat but still very filling)
-1. **Hawaian** (Please don't kill me for liking pineapple :pleading_face:)
+1. **Hawaiian** (Please don't kill me for liking pineapple :pleading_face:)
 
 ## You like pizza too? Of course you do
 
