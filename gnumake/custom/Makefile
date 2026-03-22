@@ -5,8 +5,8 @@ CC=gcc
 CFLAGS=-Wall -Wextra -std=c99
 
 # Checks if executables exist
-GREETING_EXISTS := $(or $(and $(wildcard greeting),1),0)
-TWOPARTER_EXISTS := $(or $(and $(wildcard twoparter),1),0)
+GREETING_EXISTS := $(or $(and $(wildcard greeting),1),)
+TWOPARTER_EXISTS := $(or $(and $(wildcard twoparter),1),)
 
 # Builds two executables, greeting and twoparter
 all: greeting twoparter
