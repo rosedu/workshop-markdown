@@ -12,7 +12,7 @@ TWOPARTER_EXISTS := $(or $(and $(wildcard twoparter),1),0)
 all: greeting twoparter
 
 # Builds greeting with default compilation settings
-greeting: greeting.c 
+greeting: greeting.c
 
 # Builds executable from multiple .c files and a .h header
 twoparter: part1.c part2.c header.h
