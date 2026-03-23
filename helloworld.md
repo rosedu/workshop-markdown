@@ -186,18 +186,35 @@ ld ./helloworld.o -o helloworld
 Run with:
 
 ```console
-./hello
+./helloworld
 ```
 
 ## ARM64 Assembly
 
-```as
+```asm
+.data
+msg:
+    .ascii      "Hello, ARM!\n"
+len = . - msg
+
+.text
+.globl _start
+_start:
+    mov     %r0, $1
+    ldr     %r1, =msg
+    ldr     %r2, =len
+    mov     %r7, $4
+    swi     $0
+    mov     %r0, $0
+    mov     %r7, $1
+    swi     $0
 ```
 
 Build with:
 
 ```console
-TODO
+as helloworld.S -o helloworld.o
+ld helloworld.o -o helloworld
 ```
 
 Run with:
@@ -253,7 +270,7 @@ echo "Hello, World!"
 Run with:
 
 ```console
-./helloworld
+php helloworld.php
 ```
 
 ## Perl
