@@ -194,7 +194,7 @@ Run with:
 ```asm
 .data
 msg:
-    .ascii      "Hello, ARM!\n"
+    .ascii      "Hello, World!\n"
 len = . - msg
 
 .text
