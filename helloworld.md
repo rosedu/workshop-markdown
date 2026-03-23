@@ -86,7 +86,7 @@ void main()
 Build with:
 
 ```console
-gdc -Wall -o helloworld helloworld.cpp
+gdc -Wall -o helloworld helloworld.d
 ```
 
 Run with:
@@ -124,7 +124,7 @@ fn main() {
 Build with:
 
 ```console
-rustc hello.rs
+rustc helloworld.rs
 ```
 
 Run with:
