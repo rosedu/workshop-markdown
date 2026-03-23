@@ -17,9 +17,9 @@ If you add a simple print statement to try and track down where the code is fail
 Well...there could be light after dark after all, your heroes are:
 - **Valgrind**:
 	- Run with:
-	``bash
+	```bash
 	valgrind <your_object_file>
-	``
+	```
 - **GDB**:
 	1. First, you have to compile your code with:
 	```bash
