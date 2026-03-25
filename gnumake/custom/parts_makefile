@@ -1,0 +1,3 @@
+#We use another file for this rule so that we can see how can we scatter rules across different files
+parts: header.h part1.c part2.c
+	$(CC) $(CFLAGS) $(GDB_FLAGS) $^ -o parts
