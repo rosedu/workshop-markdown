@@ -3,3 +3,10 @@
 # to the end of the line!
 
 # Start writing below this line...
+.PHONY: clean
+
+clean:
+	rm example
+
+example: example.c
+	gcc -o example example.c
