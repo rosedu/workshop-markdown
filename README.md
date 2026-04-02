@@ -425,7 +425,7 @@ That is:
 
 1. Go the pull request GitHub view and delete the remote branch.
 
-1. Remove the reference to the remove branch in your clone:
+1. Remove the reference to the remote branch in your clone:
 
    ```console
    git remote prune origin
