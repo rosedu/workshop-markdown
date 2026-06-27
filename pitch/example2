@@ -1,0 +1,18 @@
+objects = main.o util.o processing.o
+
+exec: $(objects)
+	gcc -o exec $(objects)
+
+main.o: main.c header.h
+	gcc -c $<
+
+util.o: util.c header.h
+	gcc -c $<
+
+processing.o: processing.c header.h
+	gcc -c $^
+
+.PHONY: clean
+
+clean:
+	-rm exec $(objects)
