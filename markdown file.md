@@ -47,15 +47,3 @@ def main():
 if __name__ == "__main__":
     sys.exit(main())
 ```
-
-**bold**
-
-_italic_
-
-*italic*
-
-`typewriter`
-
-~~strikethrough~~
-
-~subexponent~
