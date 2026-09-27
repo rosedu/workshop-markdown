@@ -12,6 +12,7 @@ int main(void) {
 	printf("Send a \"ping\" to get a pong;\n");
 	printf("Or send something else and you get wrong!\n");
 	fgets(mesg, 101, stdin);
+	mesg[strcspn(mesg, "\n")] = '\0';
 
 	char *answer = reply(mesg);
 	if (answer == NULL) {

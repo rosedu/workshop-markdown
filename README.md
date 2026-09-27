@@ -50,7 +50,7 @@ cat README.md
 
 You could also edit it using your preferred editor (Vim, Emacs, Nano, VS Code, Sublime) to also have syntax highlighting.
 
-Also check the [`README.github.md` file](#README.github.md), a direct copy of the [`README.md` file in the `workshop-github` repository](https://github.com/rosedu/workshop-github).
+Also check the [`README.github.md` file](README.github.md), a direct copy of the [`README.md` file in the `workshop-github` repository](https://github.com/rosedu/workshop-github).
 To see the actual contents of a file on GitHub (such as the [`README.md` file in the `workshop-github` repository](https://github.com/rosedu/workshop-github)), click the `Raw` button in the top-right corner.
 You'll get to [this page](https://raw.githubusercontent.com/rosedu/workshop-github/refs/heads/main/README.md) in raw format.
 
@@ -58,8 +58,8 @@ Identify syntax aspects in the documentation for [GitHub Flavored Markdown](http
 See:
 
 - The use of `#`, `##`, `###` for section headings.
-- The use of backticks for typewriter font, used for the names of files, functions, and
-- The use `-` and `\*` for unordered lists.
+- The use of backticks for typewriter font, used for the names of files, functions, commands and variables.
+- The use of `-` and `*` for unordered lists.
 - The use of `1.` for ordered lists.
 - The syntax used for links.
 - The use of triple backticks for code snippets.
@@ -134,7 +134,7 @@ That is:
 
 1. Go the pull request GitHub view and delete the remote branch.
 
-1. Remove the reference to the remove branch in your clone:
+1. Remove the reference to the remote branch in your clone:
 
    ```console
    git remote prune origin
@@ -147,11 +147,11 @@ That is:
    ```
 
 1. Remove the local branch that you used for creating the pull request.
-   It has the same name as the one you remote branch you removed above:
+   It has the same name as the remote branch you removed above:
 
-  ```console
-  git branch -D <work-branch-used-for-PR>
-  ```
+   ```console
+   git branch -D <work-branch-used-for-PR>
+   ```
 
 1. Fetch the updates for your assigned branch.
    Your assigned branch is now updated after the pull request was merged:
@@ -383,7 +383,7 @@ clean:
 ```
 
 There can be multiple rules labeled as phony in a single statement;
-they are just mentioned and separed with a single space.
+they are just mentioned and separated with a single space.
 
 This should be the final result:
 
@@ -425,7 +425,7 @@ That is:
 
 1. Go the pull request GitHub view and delete the remote branch.
 
-1. Remove the reference to the remove branch in your clone:
+1. Remove the reference to the remote branch in your clone:
 
    ```console
    git remote prune origin
@@ -438,11 +438,11 @@ That is:
    ```
 
 1. Remove the local branch that you used for creating the pull request.
-   It has the same name as the one you remote branch you removed above:
+   It has the same name as the remote branch you removed above:
 
-  ```console
-  git branch -D <work-branch-used-for-PR>
-  ```
+   ```console
+   git branch -D <work-branch-used-for-PR>
+   ```
 
 1. Fetch the updates for your assigned branch.
    Your assigned branch is now updated after the pull request was merged:
@@ -572,7 +572,7 @@ We can use the following operators:
  - `ifeq`: checks if the contents of the variable are *equal* to the value given inside the statement;
  - `ifneq`: checks if the contents of the variable are *different* from the value given inside the statement;
  - `ifdef`: checks whether a variable with a specific name is defined;
- - `ifndef`: checks wheter a variable with a specific name is *NOT* defined;
+ - `ifndef`: checks whether a variable with a specific name is *NOT* defined;
 
 ### Functions
 
@@ -636,7 +636,7 @@ it stops searching and starts executing recipes.
 
 ### Multi-thread execution
 
-Make supports executing multiple recipes simulatenously.
+Make supports executing multiple recipes simultaneously.
 This is achieved using the `-j <thread_count>` option and it is usually
 the norm to insert the number of logical processors / threads your machine has.
 On Linux / macOS, this usually is `-j $(nproc)`.
@@ -776,7 +776,7 @@ If all is done correctly, you will be able to see the Markdown files rendered:
 - `README.md` will be rendered at `https://<your-github-username>.github.io/workshop-markdown/`
 - `README.github.md` will be rendered at `https://<your-github-username>.github.io/workshop-markdown/README.github.html`
 - `dynamic-linking.ro.md` is rendered at `https://<your-github-username>.github.io/workshop-markdown/dynamic-linking.ro.html`
-- `dynamic-linking.ro.md` is rendered at `https://<your-github-username>.github.io/workshop-markdown/helloworld.html`
+- `helloworld.md` will be rendered at `https://<your-github-username>.github.io/workshop-markdown/helloworld.html`
 
 ### Create a Website from a Repository
 

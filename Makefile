@@ -3,7 +3,7 @@ CFLAGS = -Wall -Wextra -O2
 
 all: demo
 
-.PHONY: clean
+.PHONY: all clean
 
 demo: helloworld/helloworld.c
 	$(CC) $(CFLAGS) -o $@ $^
