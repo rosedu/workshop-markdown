@@ -45,7 +45,7 @@ Fișierul executabil `main` obținut prin linkare dinamică are un comportament 
 Observăm că dimensiunea sa este mult mai redusă: ocupă `7 KB` comparativ cu `600 KB` cât avea varianta sa statică.
 De asemenea, folosind utilitarul `file`, aflăm că este executabil obținut prin linkare dinamică (*dynamically linked*), în vreme cel obținut în exemplul anterior este executabil obținut prin linkare statică (*statically linked*).
 
-Investigăm simbolurile executabilului:
+Investigăm simbolurile executabilului.
 
 ```console
 [..]/06-dynamic$ nm main
